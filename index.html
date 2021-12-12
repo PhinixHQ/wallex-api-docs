@@ -10,13 +10,13 @@
     <meta name="description" content="وب سرویس یا API اعلان قیمت ارزهای دیجیتال به صورت لحظه ای. نمایش اطلاعات مربوط به ارزهای دیجیتال والکس در سایت شما به صورت کاملا آنلاین">
     <style>
     ::-moz-selection { /* Code for Firefox */
-      color: #fff;
-      background: rgb(255, 43, 53,0.5);
+      color: #222;
+      background: #8fa3bd;
     }
 
     ::selection {
-      color: #fff;
-      background: rgb(76, 154, 255,0.5);
+      color: #222;
+      background: #8fa3bd;
     }
 
     </style>
@@ -573,8 +573,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </span><span class="nl">"faName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"بیت کوین - تومان"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"faBaseAsset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"بیت کوین"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"faQuoteAsset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"تومان"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"stepSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"tickSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"stepSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="err">//max</span><span class="w"> </span><span class="err">quantity</span><span class="w"> </span><span class="err">precision</span><span class="w">
+        </span><span class="nl">"tickSize"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="err">//max</span><span class="w"> </span><span class="err">price</span><span class="w"> </span><span class="err">precision</span><span class="w">
         </span><span class="nl">"minQty"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.000001</span><span class="p">,</span><span class="err">//</span><span class="w"> </span><span class="err">Minimum</span><span class="w"> </span><span class="err">quantity</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">acceptable</span><span class="w">
         </span><span class="nl">"maxQty"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="err">//</span><span class="w"> </span><span class="err">Maximum</span><span class="w"> </span><span class="err">quantity</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">acceptable</span><span class="w">
         </span><span class="nl">"minNotional"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span><span class="err">//</span><span class="w"> </span><span class="err">Minimum</span><span class="w"> </span><span class="err">trade</span><span class="w"> </span><span class="err">sum</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">acceptable</span><span class="w">
@@ -709,6 +709,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <aside class="info">
 برای مشاهده توضیحات درباره market Symbol های والکس میتوانید به درخواست لیست بازار ها مراجعه کنید
 </aside>
+
+<aside class="info">
+  برای دریافت لیست کل سفارشات در همه بازار ها کافیست درخواست را به آدرس زیر ارسال کنید
+</aside>
+
+<p class='one-item'></p>
+
+<table><thead>
+<tr>
+<th>Request Type</th>
+<th>Path</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>https://wallex.ir/api/v2/depth/all</td>
+</tr>
+</tbody></table>
 <h2 id='e70376833c'>لیست آخرین معاملات بازار (عمومی)</h2>
 <p>با این درخواست لیست آخرین معاملات بازار های والکس را دریافت کنید.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
