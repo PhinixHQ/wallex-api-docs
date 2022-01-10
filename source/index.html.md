@@ -2,14 +2,13 @@
 title: مستندات API والکس
 
 language_tabs: # must be one of https://git.io/vQNgJ
-- shell
-- python
-- javascript
-- php
+  - shell
+  - python
+  - javascript
+  - php
 
 toc_footers:
-- <a href='https://wallex.ir/login'>عضویت در والکس</a>
-
+  - <a href='https://wallex.ir/login'>عضویت در والکس</a>
 
 search: false
 
@@ -25,7 +24,6 @@ code_clipboard: false
 متد ها یا خصوصی یا عمومی هستند. برای دسترسی به متد های خصوصی باید ابتدا یک Token دریافت کنید اما برای استفاده از متد های عمومی بدون احراز هویت و دریافت Token هم قادر به استفاده خواهید بود.
 
 > برای دریافت Token از متد زیر استفاده کنید :
-
 
 ```python
 import requests
@@ -60,21 +58,21 @@ var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
-  "mobile_number": "09121111111",
-  "password": "your-password"
+  mobile_number: "09121111111",
+  password: "your-password",
 });
 
 var requestOptions = {
-  method: 'POST',
+  method: "POST",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/auth/login", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -114,7 +112,7 @@ catch(HTTP_Request2_Exception $e) {
     "stream_key": "WjdeidAdsa32HN23D3r2jrasdfasd",
     "two_step": {
       "status": true, // true means you're okay
-      "type": "off",// two step type
+      "type": "off", // two step type
       "channel": null // sent from where (example : 09123456790)
     }
   },
@@ -123,18 +121,16 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-
-
 HTTP Request
 
 `POST https://api.wallex.ir/auth/login`
 
 Query Parameters
 
-Parameter | Type | Default | Description | Sample |
---------- | ---- | ------- | ----------- | ------ |
-mobile_number | String | required | شماره موبایل کاربر | 09121111111
-password | String | required | رمز عبور کاربر| your-password
+| Parameter     | Type   | Default  | Description        | Sample        |
+| ------------- | ------ | -------- | ------------------ | ------------- |
+| mobile_number | String | required | شماره موبایل کاربر | 09121111111   |
+| password      | String | required | رمز عبور کاربر     | your-password |
 
 نکته :
 
@@ -143,6 +139,7 @@ password | String | required | رمز عبور کاربر| your-password
 قبل از استفاده از API ورود دو مرحله ای را غیرفعال کنید.
 <br>
 با استفاده از رشته <code>stream_key</code> می توانید به private socket اکانت کانکت شوید.
+
 </aside>
 
 #بازارها
@@ -150,7 +147,6 @@ password | String | required | رمز عبور کاربر| your-password
 ##لیست بازار ها و وضعیتشان (عمومی)
 
 با این درخواست لیست بازار ها را دریافت کنید.
-
 
 ```python
 import requests
@@ -174,15 +170,15 @@ curl --location --request GET 'https://api.wallex.ir/v1/markets' \
 var raw = "";
 
 var requestOptions = {
-  method: 'GET',
+  method: "GET",
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/markets", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -218,18 +214,18 @@ catch(HTTP_Request2_Exception $e) {
     "symbols": {
       "BTCTMN": {
         "symbol": "BTCTMN",
-        "baseAsset": "BTC",// Source currency
-        "baseAssetPrecision": 8,// Source currency precision count
-        "quoteAsset": "TMN",// Destination currency
-        "quotePrecision": 0,// Destination currency precision count
+        "baseAsset": "BTC", // Source currency
+        "baseAssetPrecision": 8, // Source currency precision count
+        "quoteAsset": "TMN", // Destination currency
+        "quotePrecision": 0, // Destination currency precision count
         "faName": "بیت کوین - تومان",
         "faBaseAsset": "بیت کوین",
         "faQuoteAsset": "تومان",
         "stepSize": 6,
         "tickSize": 0,
-        "minQty": 0.000001,// Minimum quantity that is acceptable
-        "maxQty": 100000,// Maximum quantity that is acceptable
-        "minNotional": 100000,// Minimum trade sum that is acceptable
+        "minQty": 0.000001, // Minimum quantity that is acceptable
+        "maxQty": 100000, // Maximum quantity that is acceptable
+        "minNotional": 100000, // Minimum trade sum that is acceptable
         "stats": {
           "bidPrice": "1323000001",
           "askPrice": "1324135008",
@@ -249,8 +245,6 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-
-
 HTTP Request
 
 `GET https://api.wallex.ir/v1/markets`
@@ -258,7 +252,6 @@ HTTP Request
 ##آمار بازار جهانی (عمومی)
 
 با این درخواست آخرین آمار بازار های جهانی ارز های مختلف را دریافت کنید.
-
 
 ```python
 import requests
@@ -282,15 +275,15 @@ curl --location --request GET 'https://api.wallex.ir/v1/currencies/stats' \
 var raw = "";
 
 var requestOptions = {
-  method: 'GET',
+  method: "GET",
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/currencies/stats", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -367,8 +360,6 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-
-
 HTTP Request
 
 `GET https://api.wallex.ir/v1/currencies/stats`
@@ -378,7 +369,6 @@ HTTP Request
 <aside class="info">
 مقادیر <code>ath_date</code>, <code>created_at</code>, <code>updated_at</code> با فرمت ZULU نمایش داده میشود.
 </aside>
-
 
 ##لیست سفارشات بازار (عمومی)
 
@@ -406,15 +396,15 @@ curl --location --request GET 'https://api.wallex.ir/v1/depth?symbol=BTCTMN' \
 var raw = "";
 
 var requestOptions = {
-  method: 'GET',
+  method: "GET",
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/depth?symbol=BTCTMN", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -473,17 +463,15 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-
-
 HTTP Request
 
 `GET https://api.wallex.ir/v1/depth`
 
 Query Parameters
 
-Parameter | Type | Default | Description | Sample |
---------- | ---- | ------- | ----------- | ------ |
-symbol | String | required | نام بازار | BTCTMN
+| Parameter | Type   | Default  | Description | Sample |
+| --------- | ------ | -------- | ----------- | ------ |
+| symbol    | String | required | نام بازار   | BTCTMN |
 
 نکته :
 
@@ -491,11 +479,9 @@ symbol | String | required | نام بازار | BTCTMN
 برای مشاهده توضیحات درباره market Symbol های والکس میتوانید به درخواست لیست بازار ها مراجعه کنید
 </aside>
 
-
 ##لیست آخرین معاملات بازار (عمومی)
 
 با این درخواست لیست آخرین معاملات بازار های والکس را دریافت کنید.
-
 
 ```python
 import requests
@@ -519,15 +505,15 @@ curl --location --request GET 'https://api.wallex.ir/v1/trades?symbol=BTCTMN' \
 var raw = "";
 
 var requestOptions = {
-  method: 'GET',
+  method: "GET",
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/trades?symbol=BTCTMN", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -585,17 +571,15 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-
-
 HTTP Request
 
 `GET https://api.wallex.ir/v1/trades`
 
 Query Parameters
 
-Parameter | Type | Default | Description | Sample |
---------- | ---- | ------- | ----------- | ------ |
-symbol | String | required | نام بازار | BTCTMN
+| Parameter | Type   | Default  | Description | Sample |
+| --------- | ------ | -------- | ----------- | ------ |
+| symbol    | String | required | نام بازار   | BTCTMN |
 
 نکته :
 
@@ -603,13 +587,11 @@ symbol | String | required | نام بازار | BTCTMN
 <code>timestamp</code>  با فرمت ZULU نمایش داده میشود.
 </aside>
 
-
 ##آمار OHLC بازار والکس (عمومی)
 
 با این درخواست آمار OHLC بازار والکس را دریافت کنید.
 
 <a href="https://en.wikipedia.org/wiki/Open-high-low-close_chart" target="_blank">آمار OHLC چیست ؟‌</a>
-
 
 ```python
 import requests
@@ -633,15 +615,18 @@ curl --location --request GET 'https://api.wallex.ir/v1/udf/history?symbol=BTCTM
 var raw = "";
 
 var requestOptions = {
-  method: 'GET',
+  method: "GET",
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
-fetch("https://api.wallex.ir/v1/udf/history?symbol=BTCTMN&resolution=D&from=1624841423&to=1624841423", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+fetch(
+  "https://api.wallex.ir/v1/udf/history?symbol=BTCTMN&resolution=D&from=1624841423&to=1624841423",
+  requestOptions
+)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -674,28 +659,14 @@ catch(HTTP_Request2_Exception $e) {
 ```json
 {
   "s": "ok",
-  "t": [
-    1562182200
-  ],
-  "c": [
-    "134000000.0000000000"
-  ],
-  "o": [
-    "130578000.0000000000"
-  ],
-  "h": [
-    "123863600.0000000000"
-  ],
-  "l": [
-    "120732000.0000000000"
-  ],
-  "v": [
-    "8.3238723141"
-  ]
+  "t": [1562182200],
+  "c": ["134000000.0000000000"],
+  "o": ["130578000.0000000000"],
+  "h": ["123863600.0000000000"],
+  "l": ["120732000.0000000000"],
+  "v": ["8.3238723141"]
 }
 ```
-
-
 
 HTTP Request
 
@@ -703,24 +674,24 @@ HTTP Request
 
 Query Parameters
 
-Parameter | Type | Default | Description | Sample |
---------- | ---- | ------- | ----------- | ------ |
-symbol | String | required | نام بازار | BTCTMN
-resolution | String | required | بازه زمانی هر کندل | D
-from | Integer | required | زمان ابتدا بازه | 1624841423
-to | Integer | required | زمان پایان بازه | 1624841423
+| Parameter  | Type    | Default  | Description        | Sample     |
+| ---------- | ------- | -------- | ------------------ | ---------- |
+| symbol     | String  | required | نام بازار          | BTCTMN     |
+| resolution | String  | required | بازه زمانی هر کندل | D          |
+| from       | Integer | required | زمان ابتدا بازه    | 1624841423 |
+| to         | Integer | required | زمان پایان بازه    | 1624841423 |
 
 لیست resolution های قابل قبول :
 
-Resolution | Description |
------ | ------- |
-60 | یک ساعت |
-180 | سه ساعت |
-360 | شش ساعت |
-720 | دوازده ساعت |
-D | یک روز |
-2D | دو روز |
-3D | سه روز |
+| Resolution | Description |
+| ---------- | ----------- |
+| 60         | یک ساعت     |
+| 180        | سه ساعت     |
+| 360        | شش ساعت     |
+| 720        | دوازده ساعت |
+| D          | یک روز      |
+| 2D         | دو روز      |
+| 3D         | سه روز      |
 
 نکته :
 
@@ -762,16 +733,16 @@ myHeaders.append("Authorization", "Bearer your-token");
 var raw = "";
 
 var requestOptions = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/account/profile", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -811,7 +782,7 @@ catch(HTTP_Request2_Exception $e) {
     "first_name": "محمد",
     "last_name": "محمدی",
     "national_code": "0123456789",
-    "birthday": "1997-03-10T00:00:00Z",// In zulu format
+    "birthday": "1997-03-10T00:00:00Z", // In zulu format
     "address": {
       "city": "تهران",
       "country": "ایران",
@@ -826,10 +797,10 @@ catch(HTTP_Request2_Exception $e) {
     },
     "mobile_number": "09123456789",
     "email": "something@something.com",
-    "verification": "VERIFIED",// Available status -> VERIFIED, UNVERIFIED
+    "verification": "VERIFIED", // Available status -> VERIFIED, UNVERIFIED
     "invite_code": "oX2sym",
     "avatar": "jpeg/adwra8ec-dsq2-4e2d-8da2-d2dffaq2123d",
-    "commission": 25,// Commission in invite friend profit
+    "commission": 25, // Commission in invite friend profit
     "settings": {
       "mode": "pro",
       "theme": "dark",
@@ -860,7 +831,6 @@ catch(HTTP_Request2_Exception $e) {
   "success": true
 }
 ```
-
 
 HTTP Request
 
@@ -900,16 +870,16 @@ myHeaders.append("Authorization", "Bearer your-token");
 var raw = "";
 
 var requestOptions = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/account/card-numbers", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -948,18 +918,14 @@ catch(HTTP_Request2_Exception $e) {
     {
       "id": 12,
       "card_number": "6037991895454444",
-      "owners": [
-        "محمد محمدی"
-      ],
-      "status": "ACCEPTED"// Available status, ACCEPTED, UNACCEPTED, PENDING
+      "owners": ["محمد محمدی"],
+      "status": "ACCEPTED" // Available status, ACCEPTED, UNACCEPTED, PENDING
     },
     {
       "id": 14,
       "card_number": "6037991895453333",
-      "owners": [
-        "محمد محمدی"
-      ],
-      "status": "ACCEPTED"// Available status, ACCEPTED, UNACCEPTED, PENDING
+      "owners": ["محمد محمدی"],
+      "status": "ACCEPTED" // Available status, ACCEPTED, UNACCEPTED, PENDING
     }
   ],
   "message": "The operation was successful",
@@ -973,7 +939,6 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-
 HTTP Request
 
 `GET https://api.wallex.ir/v1/account/card-numbers`
@@ -981,7 +946,6 @@ HTTP Request
 ##ایجاد شماره کارت جدید (خصوصی)
 
 با این درخواست یک شماره کارت جدید به حسابتان اضافه کنید.
-
 
 ```python
 import requests
@@ -1017,20 +981,20 @@ myHeaders.append("Authorization", "Bearer your-token");
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
-  "card_number": "6037991895454444"
+  card_number: "6037991895454444",
 });
 
 var requestOptions = {
-  method: 'POST',
+  method: "POST",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/account/card-numbers", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -1069,17 +1033,13 @@ catch(HTTP_Request2_Exception $e) {
   "result": {
     "id": 12,
     "card_number": "6037991895454444",
-    "owners": [
-      "محمد محمدی"
-    ],
-    "status": "PENDING"// Available status, ACCEPTED, UNACCEPTED, PENDING
+    "owners": ["محمد محمدی"],
+    "status": "PENDING" // Available status, ACCEPTED, UNACCEPTED, PENDING
   },
   "message": "The operation was successful",
   "success": true
 }
 ```
-
-
 
 HTTP Request
 
@@ -1087,10 +1047,9 @@ HTTP Request
 
 Query Parameters
 
-Parameter | Type | Default | Description | Sample |
---------- | ---- | ------- | ----------- | ------ |
-card_number | String | required | شماره کارت | 6037991895454444
-
+| Parameter   | Type   | Default  | Description | Sample           |
+| ----------- | ------ | -------- | ----------- | ---------------- |
+| card_number | String | required | شماره کارت  | 6037991895454444 |
 
 ##حذف شماره کارت (خصوصی)
 
@@ -1124,16 +1083,19 @@ myHeaders.append("Authorization", "Bearer your-token");
 var raw = "";
 
 var requestOptions = {
-  method: 'DELETE',
+  method: "DELETE",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
-fetch("https://api.wallex.ir/v1/account/card-numbers/{cardNumberID}", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+fetch(
+  "https://api.wallex.ir/v1/account/card-numbers/{cardNumberID}",
+  requestOptions
+)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -1174,12 +1136,9 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-
-
 HTTP Request
 
 `DELETE https://api.wallex.ir/v1/account/card-numbers/{cardNumberID}`
-
 
 ##دریافت لیست شماره شبا های حساب (خصوصی)
 
@@ -1213,16 +1172,16 @@ myHeaders.append("Authorization", "Bearer your-token");
 var raw = "";
 
 var requestOptions = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/account/ibans", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -1260,22 +1219,18 @@ catch(HTTP_Request2_Exception $e) {
   "result": {
     "id": 10,
     "iban": "IR520000000000000000000000",
-    "owners": [
-      "محمد محمدی"
-    ],
+    "owners": ["محمد محمدی"],
     "bank_name": "قرض الحسنه رسالت",
-    "status": "PENDING"// Available status, ACCEPTED, UNACCEPTED, PENDING
+    "status": "PENDING" // Available status, ACCEPTED, UNACCEPTED, PENDING
   },
   "message": "The operation was successful",
   "success": true
 }
 ```
 
-
 HTTP Request
 
 `GET https://api.wallex.ir/v1/account/ibans`
-
 
 ##ایجاد شماره شبا جدید (خصوصی)
 
@@ -1315,20 +1270,20 @@ myHeaders.append("Authorization", "Bearer your-token");
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
-  "iban": "520000000000000000000000"
+  iban: "520000000000000000000000",
 });
 
 var requestOptions = {
-  method: 'POST',
+  method: "POST",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/account/ibans", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -1367,18 +1322,14 @@ catch(HTTP_Request2_Exception $e) {
   "result": {
     "id": 10,
     "iban": "IR520000000000000000000000",
-    "owners": [
-      "محمد محمدی"
-    ],
+    "owners": ["محمد محمدی"],
     "bank_name": "قرض الحسنه رسالت",
-    "status": "ACCEPTED"// Available status, ACCEPTED, UNACCEPTED, PENDING
+    "status": "ACCEPTED" // Available status, ACCEPTED, UNACCEPTED, PENDING
   },
   "message": "The operation was successful",
   "success": true
 }
 ```
-
-
 
 HTTP Request
 
@@ -1386,10 +1337,9 @@ HTTP Request
 
 Query Parameters
 
-Parameter | Type | Default | Description | Sample |
---------- | ---- | ------- | ----------- | ------ |
-iban | String | required | شماره شبا بدون IR | 520000000000000000000000
-
+| Parameter | Type   | Default  | Description       | Sample                   |
+| --------- | ------ | -------- | ----------------- | ------------------------ |
+| iban      | String | required | شماره شبا بدون IR | 520000000000000000000000 |
 
 ##حذف شماره شبا (خصوصی)
 
@@ -1423,16 +1373,16 @@ myHeaders.append("Authorization", "Bearer your-token");
 var raw = "";
 
 var requestOptions = {
-  method: 'DELETE',
+  method: "DELETE",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/account/ibans/{ibanID}", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -1473,12 +1423,9 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-
-
 HTTP Request
 
 `DELETE https://api.wallex.ir/v1/account/ibans/{ibanID}`
-
 
 #کیف پول
 
@@ -1514,16 +1461,16 @@ myHeaders.append("Authorization", "Bearer your-token");
 var raw = "";
 
 var requestOptions = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/account/wallets/usdt", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -1603,7 +1550,6 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-
 HTTP Request
 
 `GET https://api.wallex.ir/v1/account/wallets/usdt`
@@ -1640,16 +1586,16 @@ myHeaders.append("Authorization", "Bearer your-token");
 var raw = "";
 
 var requestOptions = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/account/balances", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -1689,9 +1635,9 @@ catch(HTTP_Request2_Exception $e) {
       "BCH": {
         "asset": "BCH",
         "faName": "بیت کوین کش",
-        "fiat": false,// Fiat is sort of real money types (like toman or dollar)
-        "value": "0.00000000",// Total balance
-        "locked": "0.00000000"// Locked balance
+        "fiat": false, // Fiat is sort of real money types (like toman or dollar)
+        "value": "0.00000000", // Total balance
+        "locked": "0.00000000" // Locked balance
       },
       "BTC": {
         "asset": "BTC",
@@ -1726,13 +1672,6 @@ catch(HTTP_Request2_Exception $e) {
         "faName": "لایت کوین",
         "fiat": false,
         "value": "0.00024310",
-        "locked": "0.00000000"
-      },
-      "PAXG": {
-        "asset": "PAXG",
-        "faName": "پکسوس گلد",
-        "fiat": false,
-        "value": "0.00000000",
         "locked": "0.00000000"
       },
       "TMN": {
@@ -1777,13 +1716,9 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-
 HTTP Request
 
 `GET https://api.wallex.ir/v1/account/balances`
-
-
-
 
 ##دریافت سطح و میزان کارمزد (خصوصی)
 
@@ -1817,16 +1752,16 @@ myHeaders.append("Authorization", "Bearer your-token");
 var raw = "";
 
 var requestOptions = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/account/fee", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -1863,9 +1798,9 @@ catch(HTTP_Request2_Exception $e) {
 {
   "result": {
     "BTCTMN": {
-      "makerFeeRate": "0.00300000",// Seller fee
-      "takerFeeRate": "0.00400000",// Buyer fee
-      "recent_days_sum": 240448// Recent trade value sum
+      "makerFeeRate": "0.00300000", // Seller fee
+      "takerFeeRate": "0.00400000", // Buyer fee
+      "recent_days_sum": 240448 // Recent trade value sum
     },
     "ETHTMN": {
       "makerFeeRate": "0.00300000",
@@ -1937,11 +1872,6 @@ catch(HTTP_Request2_Exception $e) {
       "takerFeeRate": "0.00400000",
       "recent_days_sum": 240448
     },
-    "PAXGTMN": {
-      "makerFeeRate": "0.00300000",
-      "takerFeeRate": "0.00400000",
-      "recent_days_sum": 240448
-    },
     "XRPUSDT": {
       "makerFeeRate": "0.00200000",
       "takerFeeRate": "0.00200000",
@@ -1962,35 +1892,13 @@ catch(HTTP_Request2_Exception $e) {
       "takerFeeRate": "0.00200000",
       "recent_days_sum": 0
     },
-    "PAXGUSDT": {
-      "makerFeeRate": "0.00200000",
-      "takerFeeRate": "0.00200000",
-      "recent_days_sum": 0
-    },
     "default": [],
     "metaData": {
       "levels": [
-        0,
-        5000000,
-        20000000,
-        50000000,
-        100000000,
-        500000000,
-        2000000000,
-        10000000000,
-        50000000000,
-        100000000000
+        0, 5000000, 20000000, 50000000, 100000000, 500000000, 2000000000,
+        10000000000, 50000000000, 100000000000
       ],
-      "coin_levels": [
-        0,
-        1000,
-        3000,
-        10000,
-        50000,
-        100000,
-        500000,
-        1000000
-      ],
+      "coin_levels": [0, 1000, 3000, 10000, 50000, 100000, 500000, 1000000],
       "latestTradesSum": 240448
     }
   },
@@ -1999,13 +1907,9 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-
 HTTP Request
 
 `GET https://api.wallex.ir/v1/account/fee`
-
-
-
 
 #سفارشات و معاملات
 
@@ -2057,25 +1961,25 @@ myHeaders.append("Authorization", "Bearer your-token");
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
-  "price": "24828",
-  "quantity": "10",
-  "side": "sell",
-  "symbol": "USDTTMN",
-  "type": "limit",
-  "client_id": "myUniqueRandomClientID"
+  price: "24828",
+  quantity: "10",
+  side: "sell",
+  symbol: "USDTTMN",
+  type: "limit",
+  client_id: "myUniqueRandomClientID",
 });
 
 var requestOptions = {
-  method: 'POST',
+  method: "POST",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/account/orders", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -2113,15 +2017,15 @@ catch(HTTP_Request2_Exception $e) {
 {
   "result": {
     "symbol": "USDTTMN",
-    "type": "LIMIT",// Available -> LIMIT, MARKET
-    "side": "SELL",// Available -> BUY, SELL
+    "type": "LIMIT", // Available -> LIMIT, MARKET
+    "side": "SELL", // Available -> BUY, SELL
     "clientOrderId": "LIMIT-93c76637-9742-466d-b30a-89926d2cf11c",
     "transactTime": 1624846226,
     "price": "24828.0000000000000000",
-    "origQty": "10.0000000000000000",// Original quantity
-    "executedQty": "0.0000000000000000",// Traded quantity
+    "origQty": "10.0000000000000000", // Original quantity
+    "executedQty": "0.0000000000000000", // Traded quantity
     "status": "NEW",
-    "active": true,// Active means this order is still in orderbook
+    "active": true, // Active means this order is still in orderbook
     "fills": []
   },
   "message": "The operation was successful",
@@ -2135,15 +2039,14 @@ HTTP Request
 
 Query Parameters
 
-Parameter | Type | Default | Description | Sample |
---------- | ---- | ------- | ----------- | ------ |
-price | String | required | قیمت واحد | 24828
-quantity | String | required | مقدار | 10
-side | String | required | طرف سفارش (buy-sell) | sell
-symbol | String | required | نام بازار | USDTTMN
-type | String | required | نوع سفارش (limit,market) | limit
-client_id | String (Unique) | optional | شناسه یکتا معامله (در صورت ارسال نشدن یک شناسه به صورت رندوم ایجاد خواهد شد) | myUniqueRandomClientID
-
+| Parameter | Type            | Default  | Description                                                                  | Sample                 |
+| --------- | --------------- | -------- | ---------------------------------------------------------------------------- | ---------------------- |
+| price     | String          | required | قیمت واحد                                                                    | 24828                  |
+| quantity  | String          | required | مقدار                                                                        | 10                     |
+| side      | String          | required | طرف سفارش (buy-sell)                                                         | sell                   |
+| symbol    | String          | required | نام بازار                                                                    | USDTTMN                |
+| type      | String          | required | نوع سفارش (limit,market)                                                     | limit                  |
+| client_id | String (Unique) | optional | شناسه یکتا معامله (در صورت ارسال نشدن یک شناسه به صورت رندوم ایجاد خواهد شد) | myUniqueRandomClientID |
 
 ##لغو سفارش (خصوصی)
 
@@ -2183,20 +2086,20 @@ myHeaders.append("Authorization", "Bearer your-token");
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
-  "clientOrderId": "LIMIT-93c76637-9742-466d-b30a-89926d2cf11c"
+  clientOrderId: "LIMIT-93c76637-9742-466d-b30a-89926d2cf11c",
 });
 
 var requestOptions = {
-  method: 'DELETE',
+  method: "DELETE",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
 fetch("https://api.wallex.ir/v1/account/orders", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -2256,10 +2159,9 @@ HTTP Request
 
 Query Parameters
 
-Parameter | Type | Default | Description | Sample |
---------- | ---- | ------- | ----------- | ------ |
-clientOrderId | String (Unique) | required | شناسه یکتا سفارش | LIMIT-93c76637-9742-466d-b30a-89926d2cf11c
-
+| Parameter     | Type            | Default  | Description      | Sample                                     |
+| ------------- | --------------- | -------- | ---------------- | ------------------------------------------ |
+| clientOrderId | String (Unique) | required | شناسه یکتا سفارش | LIMIT-93c76637-9742-466d-b30a-89926d2cf11c |
 
 ##دریافت لیست سفارشات فعال حساب (خصوصی)
 
@@ -2293,16 +2195,19 @@ myHeaders.append("Authorization", "Bearer your-token");
 var raw = "";
 
 var requestOptions = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
-fetch("https://api.wallex.ir/v1/account/openOrders?symbol=USDTTMN", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+fetch(
+  "https://api.wallex.ir/v1/account/openOrders?symbol=USDTTMN",
+  requestOptions
+)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -2370,11 +2275,9 @@ HTTP Request
 
 Query Parameters
 
-Parameter | Type | Default | Description | Sample |
---------- | ---- | ------- | ----------- | ------ |
-symbol | String | required | نام بازار | USDTTMN
-
-
+| Parameter | Type   | Default  | Description | Sample  |
+| --------- | ------ | -------- | ----------- | ------- |
+| symbol    | String | required | نام بازار   | USDTTMN |
 
 ##دریافت لیست معاملات اخیر حساب (خصوصی)
 
@@ -2408,16 +2311,19 @@ myHeaders.append("Authorization", "Bearer your-token");
 var raw = "";
 
 var requestOptions = {
-  method: 'GET',
+  method: "GET",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow",
 };
 
-fetch("https://api.wallex.ir/v1/account/trades?symbol=USDTTMN&side=sell&active=false", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+fetch(
+  "https://api.wallex.ir/v1/account/trades?symbol=USDTTMN&side=sell&active=false",
+  requestOptions
+)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ```php
@@ -2458,9 +2364,9 @@ catch(HTTP_Request2_Exception $e) {
         "symbol": "LTCTMN",
         "quantity": "0.0253800000000000",
         "price": "4343723.0000000000000000",
-        "sum": "110243.0000000000000000",// Quantity * Price
+        "sum": "110243.0000000000000000", // Quantity * Price
         "fee": "0.0000000000000000",
-        "feeCoefficient": "0.0000000000000000",// Fee percentage
+        "feeCoefficient": "0.0000000000000000", // Fee percentage
         "feeAsset": "LTC",
         "isBuyer": true,
         "timestamp": "2021-05-29T07:55:06Z"
@@ -2495,9 +2401,8 @@ HTTP Request
 
 Query Parameters
 
-Parameter | Type | Default | Description | Sample |
---------- | ---- | ------- | ----------- | ------ |
-symbol | String | optional | نام بازار | USDTTMN
-side | String | optional | سمت معامله (buy, sell) | sell
-active | Boolean | optional | فعال ها یا غیر فعال ها ؟ | false
-
+| Parameter | Type    | Default  | Description              | Sample  |
+| --------- | ------- | -------- | ------------------------ | ------- |
+| symbol    | String  | optional | نام بازار                | USDTTMN |
+| side      | String  | optional | سمت معامله (buy, sell)   | sell    |
+| active    | Boolean | optional | فعال ها یا غیر فعال ها ؟ | false   |
