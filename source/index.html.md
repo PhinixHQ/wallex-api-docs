@@ -8,7 +8,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - php
 
 toc_footers:
-  - <a href='https://wallex.ir/login'>عضویت در والکس</a>
+  - <a href='https://wallex.ir/login' id='signup-api'>عضویت در والکس</a>
 
 search: false
 
