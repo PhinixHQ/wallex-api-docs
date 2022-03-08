@@ -1,6 +1,6 @@
 ---
-title: مستندات API والکس
-sidebar_header: مستندات API
+title: Wallex API Documentation 
+sidebar_header: API Documentation 
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
@@ -9,36 +9,32 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - php
 
 toc_footers:
-  - <a href='https://wallex.ir/login' id='signup-api'>عضویت در والکس</a>
+  - <a href='https://wallex.ir/login' id='signup-api'>Sign Up</a>
 
-language_switcher: <a href='/en' class='lang'>English</a>
+language_switcher: <a href='/' class='lang'>Farsi</a>
 
 search: false
 
 code_clipboard: false
-
-rtl: true
 ---
 # Change Log
-<h2>۱۴۰۰/۱۲/۱۶</h2>
-اضافه شدن مستندات WebSocket بازار و معاملات.
-# مفاهیم اولیه
+<h2>2022-03-07</h2>
+Adding WebSocket docs for the matkets.
+# Introduction
 
-وب‌سرویس‌های والکس به صورت REST و در برخی موارد به صورت WebSocket در اختیار کاربران قرار گرفته‌اند.
+Wallex provides users with RESTful API and in some cases with WebSocket.
 
-## احراز هویت و توکن
-روش‌های استفاده از API به صورت خصوصی و عمومی قابل استفاده هستند. 
-برای دسترسی به روش‌های خصوصی، باید ابتدا یک Token دریافت کنید.
-برای استفاده از روش‌های عمومی نیازی به دریافت Token و احراز هویت نیست.
+## Authentication
+Methods are either private or public. To access private methods, you must first get a Token, but you will also be able to use public methods without authentication and getting Tokens. 
 
-با ورود به بخش تنظیمات در حساب کاربری، وارد بخش مدیریت APIها شوید، و اقدام به دریافت توکن کنید.
+You’ll be able to get tokens through the API management section in settings.
 
 
-#بازارها
+#Markets
 
-##لیست بازارها و وضعیت (عمومی)
+##List of market and status (Public)
 
-با این درخواست لیست بازارهای والکس و وضعیت آن‌ها را دریافت کنید.
+Get Wallex markets and status lists.  
 
 ```python
 import requests
@@ -98,7 +94,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -143,9 +139,9 @@ HTTP Request
 
 
 
-##آمار بازار جهانی (عمومی)
+##Global markets statistics (Public)
 
-با این درخواست آخرین آمار بازارهای جهانی ارزهای مختلف را دریافت کنید.
+Get the latest statistics of global markets.
 
 ```python
 import requests
@@ -205,7 +201,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -258,15 +254,15 @@ HTTP Request
 
 `GET https://api.wallex.ir/v1/currencies/stats`
 
-نکته:
+Note:
 
 <aside class="info">
-مقادیر <code>ath_date</code>, <code>created_at</code>, <code>updated_at</code> با فرمت ZULU نمایش داده میشود.
+The values of <code>ath_date</code>, <code>created_at</code>, <code>updated_at</code> are displayed in ZULU format.
 </aside>
 
-##لیست سفارش‌های بازار (عمومی)
+## Order Book (Public) 
 
-با این درخواست لیست سفارش‌ها (Order Book) را دریافت کنید.
+Get the Order book for each market.
 
 ```python
 import requests
@@ -326,7 +322,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -365,17 +361,17 @@ Query Parameters
 
 | Parameter | Type   | Default  | Description | Sample |
 | --------- | ------ | -------- | ----------- | ------ |
-| symbol    | String | required | نام بازار   | BTCTMN |
+| symbol    | String | required | Market Name   | BTCTMN |
 
-نکته:
+Note:
 
 <aside class="info">
-برای مشاهده توضیحات درباره market Symbol های والکس می‌توانید به درخواست لیست بازارها مراجعه کنید.
+To see the description of the market symbols of Wallex, you can refer to the market list. 
 </aside>
 
-##لیست آخرین معاملات بازار (عمومی)
+## Latest market trades list
 
-با این درخواست لیست آخرین معاملات بازارهای والکس را دریافت کنید.
+List of the latest trades in Wallex markets.
 
 ```python
 import requests
@@ -435,7 +431,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -474,19 +470,19 @@ Query Parameters
 
 | Parameter | Type   | Default  | Description | Sample |
 | --------- | ------ | -------- | ----------- | ------ |
-| symbol    | String | required | نام بازار   | BTCTMN |
+| symbol    | String | required | Market Name   | BTCTMN |
 
-نکته:
+Note:
 
 <aside class="info">
-<code>timestamp</code>  با فرمت ZULU نمایش داده میشود.
+The displayed <code>timestamp</code> is in ZULU format.
 </aside>
 
-##آمار OHLC بازار والکس (عمومی)
+##OHLC statistics of Wallex market
 
-با این درخواست آمار OHLC بازار والکس را دریافت کنید.
+Get the OHLC statistics of the Wallex market. 
 
-<a href="https://en.wikipedia.org/wiki/Open-high-low-close_chart" target="_blank">آمار OHLC چیست ؟‌</a>
+<a href="https://en.wikipedia.org/wiki/Open-high-low-close_chart" target="_blank">What are OHLC statistics?</a>
 
 ```python
 import requests
@@ -549,7 +545,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -571,36 +567,42 @@ Query Parameters
 
 | Parameter  | Type    | Default  | Description        | Sample     |
 | ---------- | ------- | -------- | ------------------ | ---------- |
-| symbol     | String  | required | نام بازار          | BTCTMN     |
-| resolution | String  | required | بازه زمانی هر کندل | D          |
-| from       | Integer | required | زمان ابتدا بازه    | 1624841423 |
-| to         | Integer | required | زمان پایان بازه    | 1624841423 |
+| symbol     | String  | required | Market Name          | BTCTMN     |
+| resolution | String  | required | The time interval of each candle
+ | D          |
+| from       | Integer | required | The starting time of the interval
+    | 1624841423 |
+| to         | Integer | required | The finishing time of the interval    | 1624841423 |
 
-لیست resolution های قابل قبول :
+Acceptable resolutions :
 
 | Resolution | Description |
 | ---------- | ----------- |
-| 60         | یک ساعت     |
-| 180        | سه ساعت     |
-| 360        | شش ساعت     |
-| 720        | دوازده ساعت |
-| D          | یک روز      |
-| 2D         | دو روز      |
-| 3D         | سه روز      |
+| 60         | 1 Hour     |
+| 180        | 3 Hour     |
+| 360        | 6 Hour     |
+| 720        | 12 Hour |
+| D          | 1 Day      |
+| 2D         | 2 Days     |
+| 3D         | 3 Days     |
 
-نکته:
+Note:
 
 <aside class="info">
-مقادیر <code>from</code> و <code>to</code> فرمت timestamp است.
+Values of <code>from</code> & <code>to</code> in timestamp formats.
 </aside>
-# WebSocket بازار و معاملات
-### استفاده از WebSocket
+# Market and trade WebSocket
+### Using the WebSocket
 
-وب سوکت‌های والکس دو نوع خصوصی و عمومی دارند. برای استفاده از WebSocket باید از کلاینت socket.io استفاده شود. برای استفاده از وب سوکت و دریافت اطلاعات باید به آدرس https://api.wallex.ir/socket.io درخواست خود را ارسال کنید. 
+Methods are either private or public. To access WebSocket, you must use the socket.io client. You’ll need to send and receive your requests to <code>https://api.wallex.ir/socket.io</code>
 
-نام Event که باید فرآیند Emit روی آن باید اتفاق بیفتد subscribe است. همچنین Data objectهای زیر برای دریافت اطلاعات مورد نیاز است که در هنگام فرآیند Emit باید سمت سرور ارسال شوند.
 
-## لیست سفارشات (Order Book)
+You’ll also need these data objects for your requestes:
+
+You should <code>emit</code > on the <code>subscribe</code> event.
+
+## Order Book
+The order book for each market
 
 
 WebSocket
@@ -609,11 +611,10 @@ WebSocket
 `{“channel” : “symbol@buyDepth”}`  
 
 <aside class="info">
-برای دریافت سفارش‌های فروش، پارامتر symbol ضروری‌ست.
-برای مشاهده توضیحات درباره market Symbol های والکس می‌توانید به درخواست لیست بازارها مراجعه کنید.
+To see the description of the market symbols of Wallex, you can refer to the market list.
 </aside>
 
-> خروجی
+> Output
 
 ```json
 {
@@ -628,11 +629,10 @@ WebSocket
 
 `{“channel” : “symbol@sellDepth”}`
 <aside class="info">
-برای دریافت سفارش‌های خرید، پارامتر symbol ضروری‌ست.
-برای مشاهده توضیحات درباره market Symbol های والکس می‌توانید به درخواست لیست بازارها مراجعه کنید.
+To see the description of the market symbols of Wallex, you can refer to the market list.
 </aside>
 
-## دریافت اطلاعات معاملات انجام شده
+## Latest Trade
 
 WebSocket
 
@@ -640,10 +640,9 @@ WebSocket
 `{“channel” : “symbol@trade”}`
 
 <aside class="info">
-برای دریافت سفارش‌های فروش، پارامتر symbol ضروری‌ست.
-برای مشاهده توضیحات درباره market Symbol های والکس می‌توانید به درخواست لیست بازارها مراجعه کنید.
+To see the description of the market symbols of Wallex, you can refer to the market list.
 </aside>
-> خروجی
+> Output
 
 ```json
 {
@@ -653,15 +652,15 @@ WebSocket
    "…"
 }
 ```
-## دریافت اطلاعات بازار
-با این درخواست اطلاعات بازار را دریافت کنید.
+## List of market and status
+Get Wallex markets and status lists.  
 
 
 WebSocket
 
 `{“channel” : “symbol@marketCap}`
 
-> خروجی
+> Output
 
 ```
  7d_ch: -0.86
@@ -686,11 +685,10 @@ socket: null
 symbol: "BTCUSDT"
 
 ```
-## دریافت اطلاعات خصوصی
-دریافت اطلاعات خصوصی :
-به منظور دریافت اطلاعات مختص اکانت حساب کاربری مانند بروزرسانی، موجودی، ثبت سفارش، کنسل کردن سفارش و معاملات باید ابتدا پارامتر stream_key  را  خروجی متد لاگین بردارید.
+## Private Methods
+To receive private account data like updates, balance, orders, and trades you’ll need to use <code>Outputs</code> on the <code>stream_key</code>.
 
-پس از ورود در حساب کاربری خود، خروجی متد لاگین شامل این پارمتر می‌شود که مختص به اکانت شما است. سپس باید به صورت زیر فرآیند emit را انجام دهید. 
+After you’ve logged in to your account you should <code>emit</code> on the <code>Output </code>.
 
 
 WebSocket
@@ -699,12 +697,12 @@ WebSocket
 `{“channel” : stream_key}`
 
 
- خروجی شامل تمامی بروزرسانی هایی است که در اکانت شما اتفاق می‌افتد.
-#پروفایل
+ Output will contain all of account activity updates.
+# Profile
 
-##اطلاعات پروفایل کاربر (خصوصی)
+## Profile Info (Private)
 
-با این درخواست اطلاعات پروفایل را دریافت کنید.
+Get your profile information.
 
 ```python
 import requests
@@ -774,7 +772,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -837,11 +835,11 @@ HTTP Request
 
 `GET https://api.wallex.ir/v1/account/profile`
 
-#حساب بانکی
+# Bank Account
 
-##لیست شماره کارت‌های حساب (خصوصی)
+## List of user credit card numbers (Private)
 
-با این درخواست لیست شماره کارت‌های حساب کاربری را دریافت کنید.
+Get a list of user credit card numbers.
 
 ```python
 import requests
@@ -911,7 +909,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -944,9 +942,9 @@ HTTP Request
 
 `GET https://api.wallex.ir/v1/account/card-numbers`
 
-##ایجاد شماره کارت جدید (خصوصی)
+## Creating a new credit card number (private)
 
-با این درخواست می‌توانید یک شماره کارت جدید به حساب کاربری اضافه کنید.
+Add a new credit card number to the user account.
 
 ```python
 import requests
@@ -1027,7 +1025,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -1050,11 +1048,11 @@ Query Parameters
 
 | Parameter   | Type   | Default  | Description | Sample           |
 | ----------- | ------ | -------- | ----------- | ---------------- |
-| card_number | String | required | شماره کارت  | 6037991895454444 |
+| card_number | String | required | Credit card number  | 6037991895454444 |
 
-##حذف شماره کارت (خصوصی)
+## Removing a credit card number (private)
 
-با این درخواست یک شماره کارت خاص را از حساب‌کاربری حذف کنید.
+Remove a specific credit card number from the user account. 
 
 ```python
 import requests
@@ -1127,7 +1125,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -1141,9 +1139,9 @@ HTTP Request
 
 `DELETE https://api.wallex.ir/v1/account/card-numbers/{cardNumberID}`
 
-##لیست شماره شباهای حساب (خصوصی)
+## List of IBANs
 
-با این درخواست لیست شماره شباهای حساب کاربری را دریافت کنید.
+Get the list of IBANs of the user account. 
 
 ```python
 import requests
@@ -1213,7 +1211,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -1233,9 +1231,9 @@ HTTP Request
 
 `GET https://api.wallex.ir/v1/account/ibans`
 
-##ایجاد شماره شبا جدید (خصوصی)
+## Creating a new IBAN (Private)
 
-با این درخواست یک شماره شبا جدید به حساب کاربری اضافه کنید.
+Add a new IBAN to the user account.
 
 ```python
 import requests
@@ -1316,7 +1314,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -1340,11 +1338,11 @@ Query Parameters
 
 | Parameter | Type   | Default  | Description       | Sample                   |
 | --------- | ------ | -------- | ----------------- | ------------------------ |
-| iban      | String | required | شماره شبا بدون IR | 520000000000000000000000 |
+| iban      | String | required |  IBAN | 520000000000000000000000 |
 
-##حذف شماره شبا (خصوصی)
+## Removing the IBAN (Private)
 
-با این درخواست یک شماره شبای خاص را از حساب کاربری حذف کنید.
+Remove a specific IBAN from the user account.
 
 ```python
 import requests
@@ -1414,7 +1412,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -1428,11 +1426,11 @@ HTTP Request
 
 `DELETE https://api.wallex.ir/v1/account/ibans/{ibanID}`
 
-#کیف پول
+# Wallet
 
-##دریافت کیف پول ارز دیجیتال (خصوصی)
+## Cryptocurrency wallet (Private)
 
-با این درخواست کیف پول ارز دیجیتال مورد نظر در والکس را دریافت کنید.
+.Get a cyptocurrency wallet 
 
 ```python
 import requests
@@ -1502,7 +1500,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -1555,9 +1553,9 @@ HTTP Request
 
 `GET https://api.wallex.ir/v1/account/wallets/usdt`
 
-##دریافت موجودی (خصوصی)
+## Account balance (Private)
 
-با این درخواست موجودی حسابتان را برای تمام ارزها دریافت کنید.
+Get account balance.
 
 ```python
 import requests
@@ -1627,7 +1625,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -1721,9 +1719,9 @@ HTTP Request
 
 `GET https://api.wallex.ir/v1/account/balances`
 
-##سطح کاربری و میزان کارمزد (خصوصی)
+## ACL and commission fee
 
-با این درخواست سطح کاربری و میزان کارمزد خود را دریافت کنید.
+Get your ACL and commission fee.
 
 ```python
 import requests
@@ -1793,7 +1791,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -1912,11 +1910,11 @@ HTTP Request
 
 `GET https://api.wallex.ir/v1/account/fee`
 
-#سفارش‌ها و معاملات
+# Orders and Trades
 
-##ثبت سفارش جدید (خصوصی)
+## New order (Private)
 
-با این درخواست یک سفارش جدید در بازار مورد نظرتان ثبت کنید.
+Place a new order in your target market.
 
 ```python
 import requests
@@ -2012,7 +2010,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -2042,16 +2040,16 @@ Query Parameters
 
 | Parameter | Type            | Default  | Description                                                                  | Sample                 |
 | --------- | --------------- | -------- | ---------------------------------------------------------------------------- | ---------------------- |
-| price     | String          | required | قیمت واحد                                                                    | 24828                  |
+| price     | String          | required | Pricr                                                                    | 24828                  |
 | quantity  | String          | required | مقدار                                                                        | 10                     |
-| side      | String          | required | طرف سفارش (buy-sell)                                                         | sell                   |
-| symbol    | String          | required | نام بازار                                                                    | USDTTMN                |
-| type      | String          | required | نوع سفارش (limit,market)                                                     | limit                  |
-| client_id | String (Unique) | optional | شناسه یکتا معامله (در صورت ارسال نشدن یک شناسه به صورت رندوم ایجاد خواهد شد) | myUniqueRandomClientID |
+| side      | String          | required |Side (buy-sell)                                                         | sell                   |
+| symbol    | String          | required | Market Name                                                                    | USDTTMN                |
+| type      | String          | required | Order Type (limit,market)                                                     | limit                  |
+| client_id | String (Unique) | optional | Unique transaction ID (will be generated randomly if not sent) | myUniqueRandomClientID |
 
-##لغو سفارش (خصوصی)
+## Order cancellation (Private)
 
-با این درخواست سفارشتان را لغو کنید.
+Cancel The order.
 
 ```python
 import requests
@@ -2132,7 +2130,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -2162,11 +2160,11 @@ Query Parameters
 
 | Parameter     | Type            | Default  | Description      | Sample                                     |
 | ------------- | --------------- | -------- | ---------------- | ------------------------------------------ |
-| clientOrderId | String (Unique) | required | شناسه یکتا سفارش | LIMIT-93c76637-9742-466d-b30a-89926d2cf11c |
+| clientOrderId | String (Unique) | required | Unique transaction ID | LIMIT-93c76637-9742-466d-b30a-89926d2cf11c |
 
-##لیست سفارش‌های فعال (خصوصی)
+## Active orders (Private)
 
-با این درخواست لیست سفارش‌های فعال خود را دریافت کنید.
+Get the list of your active orders. 
 
 ```python
 import requests
@@ -2239,7 +2237,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -2278,11 +2276,11 @@ Query Parameters
 
 | Parameter | Type   | Default  | Description | Sample  |
 | --------- | ------ | -------- | ----------- | ------- |
-| symbol    | String | required | نام بازار   | USDTTMN |
+| symbol    | String | required | Market Name   | USDTTMN |
 
-##لیست آخرین معاملات (خصوصی)
+## Recent transactions (Private)
 
-با این درخواست لیستی از آخرین معاملات حساب خود را دریافت کنید.
+Get a list of your latest transactions.
 
 ```python
 import requests
@@ -2355,7 +2353,7 @@ catch(HTTP_Request2_Exception $e) {
 }
 ```
 
-> خروجی
+> Output
 
 ```json
 {
@@ -2404,6 +2402,6 @@ Query Parameters
 
 | Parameter | Type    | Default  | Description              | Sample  |
 | --------- | ------- | -------- | ------------------------ | ------- |
-| symbol    | String  | optional | نام بازار                | USDTTMN |
-| side      | String  | optional | سمت معامله (buy, sell)   | sell    |
-| active    | Boolean | optional | فعال ها یا غیر فعال ها ؟ | false   |
+| symbol    | String  | optional | Market Name                | USDTTMN |
+| side      | String  | optional | Side (buy, sell)   | sell    |
+| active    | Boolean | optional | Actives and inactives | false   |

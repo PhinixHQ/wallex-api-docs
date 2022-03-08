@@ -55,6 +55,9 @@ under the License.
     </style>
     <%= stylesheet_link_tag :screen, media: :screen %>
     <%= stylesheet_link_tag :print, media: :print %>
+    <% if current_page.data.rtl %>
+      <%= stylesheet_link_tag :rtl, media: :screen %>
+    <% end %>
     <% if current_page.data.search %>
       <%= javascript_include_tag  "all" %>
     <% else %>
@@ -101,7 +104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
         <ul class="search-results"></ul>
       <% end %>
-      <h2 style="padding:16px 10px;">مستندات API</h2>
+      <h2 style="padding:16px 10px;"><%= current_page.data.sidebar_header %></h2>
       <ul id="toc" class="toc-list-h1">
         <% toc_data(page_content).each do |h1| %>
           <li>
@@ -125,6 +128,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <% end %>
         </ul>
       <% end %>
+      <div class="language_switcher">
+        <%= current_page.data.language_switcher %>
+      </div>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>

@@ -114,7 +114,6 @@ aside {
 .toc-wrapper {
     text-align: right;
     direction: rtl;
-    font-weight: normal !important;
 }
 
 
@@ -137,9 +136,4 @@ aside {
     %left-col {
         margin-#{left}: 0;
     }
-}
-
-.logo{
-  width: 50%;
-  margin: 50px auto;
 }

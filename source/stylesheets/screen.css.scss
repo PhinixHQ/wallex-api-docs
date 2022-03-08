@@ -2,7 +2,6 @@
 @import 'normalize';
 @import 'variables';
 @import 'icon-font';
-@import 'rtl';
 
 /*
 Copyright 2008-2013 Concur Technologies, Inc.
@@ -705,4 +704,31 @@ table{
 
 .copy-clipboard:hover {
   opacity: 0.8;
+}
+
+.logo{
+  width: 50%;
+  margin: 50px auto;
+}
+
+.toc-wrapper {
+  font-weight: normal !important;
+}
+
+.language_switcher {
+  margin: 5px 10px 15px;
+  .lang {
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid $main-text;
+    color: $main-text;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 300ms;
+    font-weight: 700;
+    &:hover {
+      background-color: #f4f4f4;
+    }
+  }
 }
