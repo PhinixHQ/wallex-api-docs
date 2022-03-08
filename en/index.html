@@ -6,7 +6,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
    <meta name="viewport" content="width=1024">
     <meta name="robots" content="index, follow">
-    <title>مستندات API والکس</title>
+    <title>Wallex API Documentation</title>
     <meta name="description" content="وب سرویس یا API اعلان قیمت ارزهای دیجیتال به صورت لحظه ای. نمایش اطلاعات مربوط به ارزهای دیجیتال والکس در سایت شما به صورت کاملا آنلاین">
     <style>
     ::-moz-selection { /* Code for Firefox */
@@ -295,10 +295,9 @@
   color: #859900;
 }
     </style>
-    <link href="stylesheets/screen-85e63f95.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print-4dbfbd88.css" rel="stylesheet" media="print" />
-      <link href="stylesheets/rtl-7716c779.css" rel="stylesheet" media="screen" />
-      <script src="javascripts/all_nosearch-8f5ea5a5.js"></script>
+    <link href="../stylesheets/screen-85e63f95.css" rel="stylesheet" media="screen" />
+    <link href="../stylesheets/print-4dbfbd88.css" rel="stylesheet" media="print" />
+      <script src="../javascripts/all_nosearch-8f5ea5a5.js"></script>
 
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -309,166 +308,164 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;python&quot;,&quot;javascript&quot;,&quot;php&quot;]">
+  <body class="en en_index" data-languages="[&quot;shell&quot;,&quot;python&quot;,&quot;javascript&quot;,&quot;php&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar-cad8cdcb.png" alt="" />
+        <img src="../images/navbar-cad8cdcb.png" alt="" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-7558d097.svg" class="logo" alt="" />
+      <img src="../images/logo-7558d097.svg" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
               <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="javascript">javascript</a>
               <a href="#" data-language-name="php">php</a>
         </div>
-      <h2 style="padding:16px 10px;">مستندات API</h2>
+      <h2 style="padding:16px 10px;">API Documentation</h2>
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#change-log" class="toc-h1 toc-link" data-title="Change Log">Change Log</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#" class="toc-h2 toc-link" data-title="۱۴۰۰/۱۲/۱۶">۱۴۰۰/۱۲/۱۶</a>
+                    <a href="#" class="toc-h2 toc-link" data-title="2022-03-07">2022-03-07</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#267d5dc5d0" class="toc-h1 toc-link" data-title="مفاهیم اولیه">مفاهیم اولیه</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#d04ae27f5f" class="toc-h2 toc-link" data-title="احراز هویت و توکن">احراز هویت و توکن</a>
+                    <a href="#authentication" class="toc-h2 toc-link" data-title="Authentication">Authentication</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#1ce259d3f1" class="toc-h1 toc-link" data-title="بازارها">بازارها</a>
+            <a href="#markets" class="toc-h1 toc-link" data-title="Markets">Markets</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#be1664ac7f" class="toc-h2 toc-link" data-title="لیست بازارها و وضعیت (عمومی)">لیست بازارها و وضعیت (عمومی)</a>
+                    <a href="#list-of-market-and-status-public" class="toc-h2 toc-link" data-title="List of market and status (Public)">List of market and status (Public)</a>
                   </li>
                   <li>
-                    <a href="#3971902d5e" class="toc-h2 toc-link" data-title="آمار بازار جهانی (عمومی)">آمار بازار جهانی (عمومی)</a>
+                    <a href="#global-markets-statistics-public" class="toc-h2 toc-link" data-title="Global markets statistics (Public)">Global markets statistics (Public)</a>
                   </li>
                   <li>
-                    <a href="#15bfe0954c" class="toc-h2 toc-link" data-title="لیست سفارش‌های بازار (عمومی)">لیست سفارش‌های بازار (عمومی)</a>
+                    <a href="#order-book-public" class="toc-h2 toc-link" data-title="Order Book (Public)">Order Book (Public)</a>
                   </li>
                   <li>
-                    <a href="#e70376833c" class="toc-h2 toc-link" data-title="لیست آخرین معاملات بازار (عمومی)">لیست آخرین معاملات بازار (عمومی)</a>
+                    <a href="#latest-market-trades-list" class="toc-h2 toc-link" data-title="Latest market trades list">Latest market trades list</a>
                   </li>
                   <li>
-                    <a href="#ohlc" class="toc-h2 toc-link" data-title="آمار OHLC بازار والکس (عمومی)">آمار OHLC بازار والکس (عمومی)</a>
+                    <a href="#ohlc-statistics-of-wallex-market" class="toc-h2 toc-link" data-title="OHLC statistics of Wallex market">OHLC statistics of Wallex market</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#websocket" class="toc-h1 toc-link" data-title="WebSocket بازار و معاملات">WebSocket بازار و معاملات</a>
+            <a href="#market-and-trade-websocket" class="toc-h1 toc-link" data-title="Market and trade WebSocket">Market and trade WebSocket</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#websocket-2" class="toc-h2 toc-link" data-title="استفاده از WebSocket">استفاده از WebSocket</a>
+                    <a href="#using-the-websocket" class="toc-h2 toc-link" data-title="Using the WebSocket">Using the WebSocket</a>
                   </li>
                   <li>
-                    <a href="#order-book" class="toc-h2 toc-link" data-title="لیست سفارشات (Order Book)">لیست سفارشات (Order Book)</a>
+                    <a href="#order-book" class="toc-h2 toc-link" data-title="Order Book">Order Book</a>
                   </li>
                   <li>
-                    <a href="#32526737d5" class="toc-h2 toc-link" data-title="دریافت اطلاعات معاملات انجام شده">دریافت اطلاعات معاملات انجام شده</a>
+                    <a href="#latest-trade" class="toc-h2 toc-link" data-title="Latest Trade">Latest Trade</a>
                   </li>
                   <li>
-                    <a href="#6b95b95e42" class="toc-h2 toc-link" data-title="دریافت اطلاعات بازار">دریافت اطلاعات بازار</a>
+                    <a href="#list-of-market-and-status" class="toc-h2 toc-link" data-title="List of market and status">List of market and status</a>
                   </li>
                   <li>
-                    <a href="#417c130dab" class="toc-h2 toc-link" data-title="دریافت اطلاعات خصوصی">دریافت اطلاعات خصوصی</a>
+                    <a href="#private-methods" class="toc-h2 toc-link" data-title="Private Methods">Private Methods</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#88cb25e727" class="toc-h1 toc-link" data-title="پروفایل">پروفایل</a>
+            <a href="#profile" class="toc-h1 toc-link" data-title="Profile">Profile</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#0152c28ae7" class="toc-h2 toc-link" data-title="اطلاعات پروفایل کاربر (خصوصی)">اطلاعات پروفایل کاربر (خصوصی)</a>
+                    <a href="#profile-info-private" class="toc-h2 toc-link" data-title="Profile Info (Private)">Profile Info (Private)</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#047be5d52b" class="toc-h1 toc-link" data-title="حساب بانکی">حساب بانکی</a>
+            <a href="#bank-account" class="toc-h1 toc-link" data-title="Bank Account">Bank Account</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#2673703f60" class="toc-h2 toc-link" data-title="لیست شماره کارت‌های حساب (خصوصی)">لیست شماره کارت‌های حساب (خصوصی)</a>
+                    <a href="#list-of-user-credit-card-numbers-private" class="toc-h2 toc-link" data-title="List of user credit card numbers (Private)">List of user credit card numbers (Private)</a>
                   </li>
                   <li>
-                    <a href="#5c50e230da" class="toc-h2 toc-link" data-title="ایجاد شماره کارت جدید (خصوصی)">ایجاد شماره کارت جدید (خصوصی)</a>
+                    <a href="#creating-a-new-credit-card-number-private" class="toc-h2 toc-link" data-title="Creating a new credit card number (private)">Creating a new credit card number (private)</a>
                   </li>
                   <li>
-                    <a href="#0ad7c9e7d9" class="toc-h2 toc-link" data-title="حذف شماره کارت (خصوصی)">حذف شماره کارت (خصوصی)</a>
+                    <a href="#removing-a-credit-card-number-private" class="toc-h2 toc-link" data-title="Removing a credit card number (private)">Removing a credit card number (private)</a>
                   </li>
                   <li>
-                    <a href="#d0145fb6f0" class="toc-h2 toc-link" data-title="لیست شماره شباهای حساب (خصوصی)">لیست شماره شباهای حساب (خصوصی)</a>
+                    <a href="#list-of-ibans" class="toc-h2 toc-link" data-title="List of IBANs">List of IBANs</a>
                   </li>
                   <li>
-                    <a href="#a26232ae28" class="toc-h2 toc-link" data-title="ایجاد شماره شبا جدید (خصوصی)">ایجاد شماره شبا جدید (خصوصی)</a>
+                    <a href="#creating-a-new-iban-private" class="toc-h2 toc-link" data-title="Creating a new IBAN (Private)">Creating a new IBAN (Private)</a>
                   </li>
                   <li>
-                    <a href="#2e00230c05" class="toc-h2 toc-link" data-title="حذف شماره شبا (خصوصی)">حذف شماره شبا (خصوصی)</a>
+                    <a href="#removing-the-iban-private" class="toc-h2 toc-link" data-title="Removing the IBAN (Private)">Removing the IBAN (Private)</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#9b93495188" class="toc-h1 toc-link" data-title="کیف پول">کیف پول</a>
+            <a href="#wallet" class="toc-h1 toc-link" data-title="Wallet">Wallet</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#de6fb8f8ce" class="toc-h2 toc-link" data-title="دریافت کیف پول ارز دیجیتال (خصوصی)">دریافت کیف پول ارز دیجیتال (خصوصی)</a>
+                    <a href="#cryptocurrency-wallet-private" class="toc-h2 toc-link" data-title="Cryptocurrency wallet (Private)">Cryptocurrency wallet (Private)</a>
                   </li>
                   <li>
-                    <a href="#0664a92798" class="toc-h2 toc-link" data-title="دریافت موجودی (خصوصی)">دریافت موجودی (خصوصی)</a>
+                    <a href="#account-balance-private" class="toc-h2 toc-link" data-title="Account balance (Private)">Account balance (Private)</a>
                   </li>
                   <li>
-                    <a href="#a5d6f31c16" class="toc-h2 toc-link" data-title="سطح کاربری و میزان کارمزد (خصوصی)">سطح کاربری و میزان کارمزد (خصوصی)</a>
+                    <a href="#acl-and-commission-fee" class="toc-h2 toc-link" data-title="ACL and commission fee">ACL and commission fee</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#be6c46831d" class="toc-h1 toc-link" data-title="سفارش‌ها و معاملات">سفارش‌ها و معاملات</a>
+            <a href="#orders-and-trades" class="toc-h1 toc-link" data-title="Orders and Trades">Orders and Trades</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#27f2c1ed65" class="toc-h2 toc-link" data-title="ثبت سفارش جدید (خصوصی)">ثبت سفارش جدید (خصوصی)</a>
+                    <a href="#new-order-private" class="toc-h2 toc-link" data-title="New order (Private)">New order (Private)</a>
                   </li>
                   <li>
-                    <a href="#2ce6660b81" class="toc-h2 toc-link" data-title="لغو سفارش (خصوصی)">لغو سفارش (خصوصی)</a>
+                    <a href="#order-cancellation-private" class="toc-h2 toc-link" data-title="Order cancellation (Private)">Order cancellation (Private)</a>
                   </li>
                   <li>
-                    <a href="#8b78f0fc76" class="toc-h2 toc-link" data-title="لیست سفارش‌های فعال (خصوصی)">لیست سفارش‌های فعال (خصوصی)</a>
+                    <a href="#active-orders-private" class="toc-h2 toc-link" data-title="Active orders (Private)">Active orders (Private)</a>
                   </li>
                   <li>
-                    <a href="#232c34cd53" class="toc-h2 toc-link" data-title="لیست آخرین معاملات (خصوصی)">لیست آخرین معاملات (خصوصی)</a>
+                    <a href="#recent-transactions-private" class="toc-h2 toc-link" data-title="Recent transactions (Private)">Recent transactions (Private)</a>
                   </li>
               </ul>
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='https://wallex.ir/login' id='signup-api'>عضویت در والکس</a></li>
+            <li><a href='https://wallex.ir/login' id='signup-api'>Sign Up</a></li>
         </ul>
       <div class="language_switcher">
-        <a href='/en' class='lang'>English</a>
+        <a href='/' class='lang'>Farsi</a>
       </div>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='change-log'>Change Log</h1>
-<h2>۱۴۰۰/۱۲/۱۶</h2>
+<h2>2022-03-07</h2>
 
-<p>اضافه شدن مستندات WebSocket بازار و معاملات.</p>
-<h1 id='267d5dc5d0'>مفاهیم اولیه</h1>
-<p>وب‌سرویس‌های والکس به صورت REST و در برخی موارد به صورت WebSocket در اختیار کاربران قرار گرفته‌اند.</p>
-<h2 id='d04ae27f5f'>احراز هویت و توکن</h2>
-<p>روش‌های استفاده از API به صورت خصوصی و عمومی قابل استفاده هستند. 
-برای دسترسی به روش‌های خصوصی، باید ابتدا یک Token دریافت کنید.
-برای استفاده از روش‌های عمومی نیازی به دریافت Token و احراز هویت نیست.</p>
+<p>Adding WebSocket docs for the matkets.</p>
+<h1 id='introduction'>Introduction</h1>
+<p>Wallex provides users with RESTful API and in some cases with WebSocket.</p>
+<h2 id='authentication'>Authentication</h2>
+<p>Methods are either private or public. To access private methods, you must first get a Token, but you will also be able to use public methods without authentication and getting Tokens. </p>
 
-<p>با ورود به بخش تنظیمات در حساب کاربری، وارد بخش مدیریت APIها شوید، و اقدام به دریافت توکن کنید.</p>
-<h1 id='1ce259d3f1'>بازارها</h1><h2 id='be1664ac7f'>لیست بازارها و وضعیت (عمومی)</h2>
-<p>با این درخواست لیست بازارهای والکس و وضعیت آن‌ها را دریافت کنید.</p>
+<p>You’ll be able to get tokens through the API management section in settings.</p>
+<h1 id='markets'>Markets</h1><h2 id='list-of-market-and-status-public'>List of market and status (Public)</h2>
+<p>Get Wallex markets and status lists.  </p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/markets"</span>
@@ -517,7 +514,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -557,8 +554,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>HTTP Request</p>
 
 <p><code>GET https://api.wallex.ir/v1/markets</code></p>
-<h2 id='3971902d5e'>آمار بازار جهانی (عمومی)</h2>
-<p>با این درخواست آخرین آمار بازارهای جهانی ارزهای مختلف را دریافت کنید.</p>
+<h2 id='global-markets-statistics-public'>Global markets statistics (Public)</h2>
+<p>Get the latest statistics of global markets.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/currencies/stats"</span>
@@ -607,7 +604,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -658,13 +655,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <p><code>GET https://api.wallex.ir/v1/currencies/stats</code></p>
 
-<p>نکته:</p>
+<p>Note:</p>
 
 <aside class="info">
-مقادیر <code>ath_date</code>, <code>created_at</code>, <code>updated_at</code> با فرمت ZULU نمایش داده میشود.
+The values of <code>ath_date</code>, <code>created_at</code>, <code>updated_at</code> are displayed in ZULU format.
 </aside>
-<h2 id='15bfe0954c'>لیست سفارش‌های بازار (عمومی)</h2>
-<p>با این درخواست لیست سفارش‌ها (Order Book) را دریافت کنید.</p>
+<h2 id='order-book-public'>Order Book (Public)</h2>
+<p>Get the Order book for each market.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/depth?symbol=BTCTMN"</span>
@@ -713,7 +710,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -761,18 +758,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td>symbol</td>
 <td>String</td>
 <td>required</td>
-<td>نام بازار</td>
+<td>Market Name</td>
 <td>BTCTMN</td>
 </tr>
 </tbody></table>
 
-<p>نکته:</p>
+<p>Note:</p>
 
 <aside class="info">
-برای مشاهده توضیحات درباره market Symbol های والکس می‌توانید به درخواست لیست بازارها مراجعه کنید.
+To see the description of the market symbols of Wallex, you can refer to the market list. 
 </aside>
-<h2 id='e70376833c'>لیست آخرین معاملات بازار (عمومی)</h2>
-<p>با این درخواست لیست آخرین معاملات بازارهای والکس را دریافت کنید.</p>
+<h2 id='latest-market-trades-list'>Latest market trades list</h2>
+<p>List of the latest trades in Wallex markets.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/trades?symbol=BTCTMN"</span>
@@ -821,7 +818,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -869,20 +866,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td>symbol</td>
 <td>String</td>
 <td>required</td>
-<td>نام بازار</td>
+<td>Market Name</td>
 <td>BTCTMN</td>
 </tr>
 </tbody></table>
 
-<p>نکته:</p>
+<p>Note:</p>
 
 <aside class="info">
-<code>timestamp</code>  با فرمت ZULU نمایش داده میشود.
+The displayed <code>timestamp</code> is in ZULU format.
 </aside>
-<h2 id='ohlc'>آمار OHLC بازار والکس (عمومی)</h2>
-<p>با این درخواست آمار OHLC بازار والکس را دریافت کنید.</p>
+<h2 id='ohlc-statistics-of-wallex-market'>OHLC statistics of Wallex market</h2>
+<p>Get the OHLC statistics of the Wallex market. </p>
 
-<p><a href="https://en.wikipedia.org/wiki/Open-high-low-close_chart" target="_blank">آمار OHLC چیست ؟‌</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Open-high-low-close_chart" target="_blank">What are OHLC statistics?</a></p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/udf/history?symbol=BTCTMN&amp;resolution=D&amp;from=1624841423&amp;to=1624841423"</span>
@@ -934,7 +931,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"s"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
@@ -965,33 +962,47 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <td>symbol</td>
 <td>String</td>
 <td>required</td>
-<td>نام بازار</td>
+<td>Market Name</td>
 <td>BTCTMN</td>
 </tr>
 <tr>
 <td>resolution</td>
 <td>String</td>
 <td>required</td>
-<td>بازه زمانی هر کندل</td>
+<td>The time interval of each candle</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
 <td>D</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>from</td>
 <td>Integer</td>
 <td>required</td>
-<td>زمان ابتدا بازه</td>
+<td>The starting time of the interval</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
 <td>1624841423</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>to</td>
 <td>Integer</td>
 <td>required</td>
-<td>زمان پایان بازه</td>
+<td>The finishing time of the interval</td>
 <td>1624841423</td>
 </tr>
 </tbody></table>
 
-<p>لیست resolution های قابل قبول :</p>
+<p>Acceptable resolutions :</p>
 
 <table><thead>
 <tr>
@@ -1001,55 +1012,58 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </thead><tbody>
 <tr>
 <td>60</td>
-<td>یک ساعت</td>
+<td>1 Hour</td>
 </tr>
 <tr>
 <td>180</td>
-<td>سه ساعت</td>
+<td>3 Hour</td>
 </tr>
 <tr>
 <td>360</td>
-<td>شش ساعت</td>
+<td>6 Hour</td>
 </tr>
 <tr>
 <td>720</td>
-<td>دوازده ساعت</td>
+<td>12 Hour</td>
 </tr>
 <tr>
 <td>D</td>
-<td>یک روز</td>
+<td>1 Day</td>
 </tr>
 <tr>
 <td>2D</td>
-<td>دو روز</td>
+<td>2 Days</td>
 </tr>
 <tr>
 <td>3D</td>
-<td>سه روز</td>
+<td>3 Days</td>
 </tr>
 </tbody></table>
 
-<p>نکته:</p>
+<p>Note:</p>
 
 <aside class="info">
-مقادیر <code>from</code> و <code>to</code> فرمت timestamp است.
+Values of <code>from</code> & <code>to</code> in timestamp formats.
 </aside>
-<h1 id='websocket'>WebSocket بازار و معاملات</h1><h3 id='websocket-2'>استفاده از WebSocket</h3>
-<p>وب سوکت‌های والکس دو نوع خصوصی و عمومی دارند. برای استفاده از WebSocket باید از کلاینت socket.io استفاده شود. برای استفاده از وب سوکت و دریافت اطلاعات باید به آدرس https://api.wallex.ir/socket.io درخواست خود را ارسال کنید. </p>
+<h1 id='market-and-trade-websocket'>Market and trade WebSocket</h1><h3 id='using-the-websocket'>Using the WebSocket</h3>
+<p>Methods are either private or public. To access WebSocket, you must use the socket.io client. You’ll need to send and receive your requests to <code>https://api.wallex.ir/socket.io</code></p>
 
-<p>نام Event که باید فرآیند Emit روی آن باید اتفاق بیفتد subscribe است. همچنین Data objectهای زیر برای دریافت اطلاعات مورد نیاز است که در هنگام فرآیند Emit باید سمت سرور ارسال شوند.</p>
-<h2 id='order-book'>لیست سفارشات (Order Book)</h2>
+<p>You’ll also need these data objects for your requestes:</p>
+
+<p>You should <code>emit</code > on the <code>subscribe</code> event.</p>
+<h2 id='order-book'>Order Book</h2>
+<p>The order book for each market</p>
+
 <p>WebSocket</p>
 
 <p><code>{“channel” : “symbol@buyDepth”}</code>  </p>
 
 <aside class="info">
-برای دریافت سفارش‌های فروش، پارامتر symbol ضروری‌ست.
-برای مشاهده توضیحات درباره market Symbol های والکس می‌توانید به درخواست لیست بازارها مراجعه کنید.
+To see the description of the market symbols of Wallex, you can refer to the market list.
 </aside>
 
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
    </span><span class="nl">"quantity"</span><span class="p">:</span><span class="mf">0.0058</span><span class="p">,</span><span class="w">
@@ -1061,21 +1075,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <p><code>{“channel” : “symbol@sellDepth”}</code>
 <aside class="info">
-برای دریافت سفارش‌های خرید، پارامتر symbol ضروری‌ست.
-برای مشاهده توضیحات درباره market Symbol های والکس می‌توانید به درخواست لیست بازارها مراجعه کنید.
+To see the description of the market symbols of Wallex, you can refer to the market list.
 </aside></p>
-<h2 id='32526737d5'>دریافت اطلاعات معاملات انجام شده</h2>
+<h2 id='latest-trade'>Latest Trade</h2>
 <p>WebSocket</p>
 
 <p><code>{“channel” : “symbol@trade”}</code></p>
 
 <aside class="info">
-برای دریافت سفارش‌های فروش، پارامتر symbol ضروری‌ست.
-برای مشاهده توضیحات درباره market Symbol های والکس می‌توانید به درخواست لیست بازارها مراجعه کنید.
+To see the description of the market symbols of Wallex, you can refer to the market list.
 </aside>
 
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
    </span><span class="nl">"isBuyOrder"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -1083,15 +1095,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    </span><span class="nl">"price"</span><span class="p">:</span><span class="s2">"1018259534.0000000000000000"</span><span class="p">,</span><span class="w">
    </span><span class="s2">"…"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h2 id='6b95b95e42'>دریافت اطلاعات بازار</h2>
-<p>با این درخواست اطلاعات بازار را دریافت کنید.</p>
+</span></code></pre></div><h2 id='list-of-market-and-status'>List of market and status</h2>
+<p>Get Wallex markets and status lists.  </p>
 
 <p>WebSocket</p>
 
 <p><code>{“channel” : “symbol@marketCap}</code></p>
 
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight plaintext"><code> 7d_ch: -0.86
 7d_volume: "11.6699390000000000"
@@ -1114,19 +1126,18 @@ lastTradeSide: "SELL"
 socket: null
 symbol: "BTCUSDT"
 
-</code></pre></div><h2 id='417c130dab'>دریافت اطلاعات خصوصی</h2>
-<p>دریافت اطلاعات خصوصی :
-به منظور دریافت اطلاعات مختص اکانت حساب کاربری مانند بروزرسانی، موجودی، ثبت سفارش، کنسل کردن سفارش و معاملات باید ابتدا پارامتر stream_key  را  خروجی متد لاگین بردارید.</p>
+</code></pre></div><h2 id='private-methods'>Private Methods</h2>
+<p>To receive private account data like updates, balance, orders, and trades you’ll need to use <code>Outputs</code> on the <code>stream_key</code>.</p>
 
-<p>پس از ورود در حساب کاربری خود، خروجی متد لاگین شامل این پارمتر می‌شود که مختص به اکانت شما است. سپس باید به صورت زیر فرآیند emit را انجام دهید. </p>
+<p>After you’ve logged in to your account you should <code>emit</code> on the <code>Output </code>.</p>
 
 <p>WebSocket</p>
 
 <p><code>{“channel” : stream_key}</code></p>
 
-<p>خروجی شامل تمامی بروزرسانی هایی است که در اکانت شما اتفاق می‌افتد.</p>
-<h1 id='88cb25e727'>پروفایل</h1><h2 id='0152c28ae7'>اطلاعات پروفایل کاربر (خصوصی)</h2>
-<p>با این درخواست اطلاعات پروفایل را دریافت کنید.</p>
+<p>Output will contain all of account activity updates.</p>
+<h1 id='profile'>Profile</h1><h2 id='profile-info-private'>Profile Info (Private)</h2>
+<p>Get your profile information.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/account/profile"</span>
@@ -1185,7 +1196,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1245,8 +1256,8 @@ symbol: "BTCUSDT"
 <p>HTTP Request</p>
 
 <p><code>GET https://api.wallex.ir/v1/account/profile</code></p>
-<h1 id='047be5d52b'>حساب بانکی</h1><h2 id='2673703f60'>لیست شماره کارت‌های حساب (خصوصی)</h2>
-<p>با این درخواست لیست شماره کارت‌های حساب کاربری را دریافت کنید.</p>
+<h1 id='bank-account'>Bank Account</h1><h2 id='list-of-user-credit-card-numbers-private'>List of user credit card numbers (Private)</h2>
+<p>Get a list of user credit card numbers.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/account/card-numbers"</span>
@@ -1305,7 +1316,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1335,8 +1346,8 @@ symbol: "BTCUSDT"
 <p>HTTP Request</p>
 
 <p><code>GET https://api.wallex.ir/v1/account/card-numbers</code></p>
-<h2 id='5c50e230da'>ایجاد شماره کارت جدید (خصوصی)</h2>
-<p>با این درخواست می‌توانید یک شماره کارت جدید به حساب کاربری اضافه کنید.</p>
+<h2 id='creating-a-new-credit-card-number-private'>Creating a new credit card number (private)</h2>
+<p>Add a new credit card number to the user account.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
@@ -1406,7 +1417,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1438,12 +1449,12 @@ symbol: "BTCUSDT"
 <td>card_number</td>
 <td>String</td>
 <td>required</td>
-<td>شماره کارت</td>
+<td>Credit card number</td>
 <td>6037991895454444</td>
 </tr>
 </tbody></table>
-<h2 id='0ad7c9e7d9'>حذف شماره کارت (خصوصی)</h2>
-<p>با این درخواست یک شماره کارت خاص را از حساب‌کاربری حذف کنید.</p>
+<h2 id='removing-a-credit-card-number-private'>Removing a credit card number (private)</h2>
+<p>Remove a specific credit card number from the user account. </p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/account/card-numbers/{cardNumberID}"</span>
@@ -1505,7 +1516,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
@@ -1516,8 +1527,8 @@ symbol: "BTCUSDT"
 <p>HTTP Request</p>
 
 <p><code>DELETE https://api.wallex.ir/v1/account/card-numbers/{cardNumberID}</code></p>
-<h2 id='d0145fb6f0'>لیست شماره شباهای حساب (خصوصی)</h2>
-<p>با این درخواست لیست شماره شباهای حساب کاربری را دریافت کنید.</p>
+<h2 id='list-of-ibans'>List of IBANs</h2>
+<p>Get the list of IBANs of the user account. </p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/account/ibans"</span>
@@ -1576,7 +1587,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1593,8 +1604,8 @@ symbol: "BTCUSDT"
 <p>HTTP Request</p>
 
 <p><code>GET https://api.wallex.ir/v1/account/ibans</code></p>
-<h2 id='a26232ae28'>ایجاد شماره شبا جدید (خصوصی)</h2>
-<p>با این درخواست یک شماره شبا جدید به حساب کاربری اضافه کنید.</p>
+<h2 id='creating-a-new-iban-private'>Creating a new IBAN (Private)</h2>
+<p>Add a new IBAN to the user account.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
@@ -1664,7 +1675,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1697,12 +1708,12 @@ symbol: "BTCUSDT"
 <td>iban</td>
 <td>String</td>
 <td>required</td>
-<td>شماره شبا بدون IR</td>
+<td>IBAN</td>
 <td>520000000000000000000000</td>
 </tr>
 </tbody></table>
-<h2 id='2e00230c05'>حذف شماره شبا (خصوصی)</h2>
-<p>با این درخواست یک شماره شبای خاص را از حساب کاربری حذف کنید.</p>
+<h2 id='removing-the-iban-private'>Removing the IBAN (Private)</h2>
+<p>Remove a specific IBAN from the user account.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/account/ibans/{ibanID}"</span>
@@ -1761,7 +1772,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
@@ -1772,8 +1783,8 @@ symbol: "BTCUSDT"
 <p>HTTP Request</p>
 
 <p><code>DELETE https://api.wallex.ir/v1/account/ibans/{ibanID}</code></p>
-<h1 id='9b93495188'>کیف پول</h1><h2 id='de6fb8f8ce'>دریافت کیف پول ارز دیجیتال (خصوصی)</h2>
-<p>با این درخواست کیف پول ارز دیجیتال مورد نظر در والکس را دریافت کنید.</p>
+<h1 id='wallet'>Wallet</h1><h2 id='cryptocurrency-wallet-private'>Cryptocurrency wallet (Private)</h2>
+<p>.Get a cyptocurrency wallet </p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/account/wallets/usdt"</span>
@@ -1832,7 +1843,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1882,8 +1893,8 @@ symbol: "BTCUSDT"
 <p>HTTP Request</p>
 
 <p><code>GET https://api.wallex.ir/v1/account/wallets/usdt</code></p>
-<h2 id='0664a92798'>دریافت موجودی (خصوصی)</h2>
-<p>با این درخواست موجودی حسابتان را برای تمام ارزها دریافت کنید.</p>
+<h2 id='account-balance-private'>Account balance (Private)</h2>
+<p>Get account balance.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/account/balances"</span>
@@ -1942,7 +1953,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2033,8 +2044,8 @@ symbol: "BTCUSDT"
 <p>HTTP Request</p>
 
 <p><code>GET https://api.wallex.ir/v1/account/balances</code></p>
-<h2 id='a5d6f31c16'>سطح کاربری و میزان کارمزد (خصوصی)</h2>
-<p>با این درخواست سطح کاربری و میزان کارمزد خود را دریافت کنید.</p>
+<h2 id='acl-and-commission-fee'>ACL and commission fee</h2>
+<p>Get your ACL and commission fee.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/account/fee"</span>
@@ -2093,7 +2104,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2209,8 +2220,8 @@ symbol: "BTCUSDT"
 <p>HTTP Request</p>
 
 <p><code>GET https://api.wallex.ir/v1/account/fee</code></p>
-<h1 id='be6c46831d'>سفارش‌ها و معاملات</h1><h2 id='27f2c1ed65'>ثبت سفارش جدید (خصوصی)</h2>
-<p>با این درخواست یک سفارش جدید در بازار مورد نظرتان ثبت کنید.</p>
+<h1 id='orders-and-trades'>Orders and Trades</h1><h2 id='new-order-private'>New order (Private)</h2>
+<p>Place a new order in your target market.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
@@ -2295,7 +2306,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2334,7 +2345,7 @@ symbol: "BTCUSDT"
 <td>price</td>
 <td>String</td>
 <td>required</td>
-<td>قیمت واحد</td>
+<td>Pricr</td>
 <td>24828</td>
 </tr>
 <tr>
@@ -2348,33 +2359,33 @@ symbol: "BTCUSDT"
 <td>side</td>
 <td>String</td>
 <td>required</td>
-<td>طرف سفارش (buy-sell)</td>
+<td>Side (buy-sell)</td>
 <td>sell</td>
 </tr>
 <tr>
 <td>symbol</td>
 <td>String</td>
 <td>required</td>
-<td>نام بازار</td>
+<td>Market Name</td>
 <td>USDTTMN</td>
 </tr>
 <tr>
 <td>type</td>
 <td>String</td>
 <td>required</td>
-<td>نوع سفارش (limit,market)</td>
+<td>Order Type (limit,market)</td>
 <td>limit</td>
 </tr>
 <tr>
 <td>client_id</td>
 <td>String (Unique)</td>
 <td>optional</td>
-<td>شناسه یکتا معامله (در صورت ارسال نشدن یک شناسه به صورت رندوم ایجاد خواهد شد)</td>
+<td>Unique transaction ID (will be generated randomly if not sent)</td>
 <td>myUniqueRandomClientID</td>
 </tr>
 </tbody></table>
-<h2 id='2ce6660b81'>لغو سفارش (خصوصی)</h2>
-<p>با این درخواست سفارشتان را لغو کنید.</p>
+<h2 id='order-cancellation-private'>Order cancellation (Private)</h2>
+<p>Cancel The order.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
@@ -2444,7 +2455,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2483,12 +2494,12 @@ symbol: "BTCUSDT"
 <td>clientOrderId</td>
 <td>String (Unique)</td>
 <td>required</td>
-<td>شناسه یکتا سفارش</td>
+<td>Unique transaction ID</td>
 <td>LIMIT-93c76637-9742-466d-b30a-89926d2cf11c</td>
 </tr>
 </tbody></table>
-<h2 id='8b78f0fc76'>لیست سفارش‌های فعال (خصوصی)</h2>
-<p>با این درخواست لیست سفارش‌های فعال خود را دریافت کنید.</p>
+<h2 id='active-orders-private'>Active orders (Private)</h2>
+<p>Get the list of your active orders. </p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/account/openOrders?symbol=USDTTMN"</span>
@@ -2550,7 +2561,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2598,12 +2609,12 @@ symbol: "BTCUSDT"
 <td>symbol</td>
 <td>String</td>
 <td>required</td>
-<td>نام بازار</td>
+<td>Market Name</td>
 <td>USDTTMN</td>
 </tr>
 </tbody></table>
-<h2 id='232c34cd53'>لیست آخرین معاملات (خصوصی)</h2>
-<p>با این درخواست لیستی از آخرین معاملات حساب خود را دریافت کنید.</p>
+<h2 id='recent-transactions-private'>Recent transactions (Private)</h2>
+<p>Get a list of your latest transactions.</p>
 <div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">url</span> <span class="o">=</span> <span class="s">"https://api.wallex.ir/v1/account/trades?symbol=USDTTMN&amp;side=sell&amp;active=false"</span>
@@ -2665,7 +2676,7 @@ symbol: "BTCUSDT"
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p>خروجی</p>
+<p>Output</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -2723,21 +2734,21 @@ symbol: "BTCUSDT"
 <td>symbol</td>
 <td>String</td>
 <td>optional</td>
-<td>نام بازار</td>
+<td>Market Name</td>
 <td>USDTTMN</td>
 </tr>
 <tr>
 <td>side</td>
 <td>String</td>
 <td>optional</td>
-<td>سمت معامله (buy, sell)</td>
+<td>Side (buy, sell)</td>
 <td>sell</td>
 </tr>
 <tr>
 <td>active</td>
 <td>Boolean</td>
 <td>optional</td>
-<td>فعال ها یا غیر فعال ها ؟</td>
+<td>Actives and inactives</td>
 <td>false</td>
 </tr>
 </tbody></table>
