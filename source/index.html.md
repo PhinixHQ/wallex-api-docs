@@ -1,5 +1,6 @@
 ---
 title: مستندات API والکس
+meta_description: وب سرویس یا API اعلان قیمت ارزهای دیجیتال به صورت لحظه ای. نمایش اطلاعات مربوط به ارزهای دیجیتال والکس در سایت شما به صورت کاملا آنلاین
 sidebar_header: مستندات API
 
 language_tabs: # must be one of https://git.io/vQNgJ

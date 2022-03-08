@@ -1,5 +1,6 @@
 ---
 title: Wallex API Documentation 
+meta_description: Official Documentation for the Wallex APIs and Streams
 sidebar_header: API Documentation 
 
 language_tabs: # must be one of https://git.io/vQNgJ
