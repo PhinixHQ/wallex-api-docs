@@ -20,7 +20,7 @@ code_clipboard: false
 ---
 # Change Log
 <h3>2022-04-04</h3>
-New API Managemnt process.
+New API Management process.
 
 
 <h3>2022-03-07</h3>
