@@ -19,8 +19,14 @@ search: false
 code_clipboard: false
 ---
 # Change Log
-<h2>2022-03-07</h2>
+<h3>2022-04-04</h3>
+New API Managemnt process.
+
+
+<h3>2022-03-07</h3>
 Adding WebSocket docs for the matkets.
+
+
 # Introduction
 
 Wallex provides users with RESTful API and in some cases with WebSocket.
@@ -28,7 +34,45 @@ Wallex provides users with RESTful API and in some cases with WebSocket.
 ## Authentication
 Methods are either private or public. To access private methods, you must first get a Token, but you will also be able to use public methods without authentication and getting Tokens. 
 
-You’ll be able to get tokens through the API management section in settings.
+## Get a new API Key:
+You can create a new API key, by referring to <a href="https://wallex.ir/app/my-account/api-management" target="_blank">API Management</a>
+ section in your profile.
+
+In order to create a new API key, you will need to enter required information as below:
+
+<h3> API name (mandatory)</h3>
+You have to set a name for your API key.
+
+
+<h3>Valid to </h3>
+
+
+the default validation date is up to 90 days; however, you can shorten the time of expiration to 60, 30 or 15 days, if you wish.
+
+
+<h3>Permissions </h3>
+All API keys have “read access” as a default; however you can grant the access of trade and withdraw if you wish. Please note that in case you allow withdraw access, you will have to enter permitted IPs for your operations’ security
+
+
+<h3>Permitted IPs (Mandatory if withdraw is allowed) </h3>
+After all information are given, you will have to pass the two-step verification by entering the OTP sent to you Email and then to you phone number. Please make sure you keep the API key somewhere safe as you will be able to view and copy the API key once.
+
+
+## EDIT API keys:
+You can edit your API keys by referring to the list in API management section. Please note you will not be able to edit expiration date; For this purpose, you will need to create a new API key.
+In order to make changes in your API key, you need to pass the two-step verification for your own security.
+
+
+## Expiry of API keys:
+All API keys will be deactivated in the expiration date and will not be in use any longer. To prevent any malfunction in users’ operation, we will notify you 48 hours before expiration and also once the API key is deactivated, through Emails and in-app messages.
+
+
+## Limitations in API keys:
+ Please be noted that you cannot have more than 3 active API keys. 
+ 
+ 
+ ## Delete API keys:
+ In order to have your API keys deleted, you will have to pass the two-step verification after confirming your operation.
 
 
 #Markets
@@ -664,7 +708,7 @@ WebSocket
 > Output
 
 ```
- 7d_ch: -0.86
+7d_ch: -0.86
 7d_volume: "11.6699390000000000"
 24h_ch: -1.19
 24h_highPrice: "39670.9800000000000000"
