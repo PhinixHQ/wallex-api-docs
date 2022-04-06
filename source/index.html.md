@@ -40,6 +40,16 @@ rtl: true
 برای دسترسی به روش‌های خصوصی، باید ابتدا یک Token دریافت کنید.
 برای استفاده از روش‌های عمومی نیازی به دریافت Token و احراز هویت نیست.
 
+توکن خصوصی دریافت شده باید به صورت HTTP Header باید به شکل زیر به صورت زیر در درخواست ارسال شود:
+```
+x-api-key: YouHaveToPlaceYourKeyHere
+```
+
+
+```
+x-api-key: YouHaveToPlaceYourKeyHere
+```
+
 ## دریافت کلید API:
 بعد از ورود به حساب‌کاربری خود در والکس، شما می‌توانید با مراجعه به بخش <a href="https://wallex.ir/app/my-account/api-management" target="_blank">مدیریت API</a> اقدام به دریافت توکن جدید کنید.
 

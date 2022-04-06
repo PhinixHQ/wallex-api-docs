@@ -34,6 +34,17 @@ Wallex provides users with RESTful API and in some cases with WebSocket.
 ## Authentication
 Methods are either private or public. To access private methods, you must first get a Token, but you will also be able to use public methods without authentication and getting Tokens. 
 
+
+You should place your API key on HTTP Header like:
+```
+x-api-key: YouHaveToPlaceYourKeyHere
+```
+
+```
+x-api-key: YouHaveToPlaceYourKeyHere
+```
+
+
 ## Get a new API Key:
 You can create a new API key, by referring to <a href="https://wallex.ir/app/my-account/api-management" target="_blank">API Management</a>
  section in your profile.
