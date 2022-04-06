@@ -481,7 +481,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Wallex provides users with RESTful API and in some cases with WebSocket.</p>
 <h2 id='authentication'>Authentication</h2>
 <p>Methods are either private or public. To access private methods, you must first get a Token, but you will also be able to use public methods without authentication and getting Tokens. </p>
-<h2 id='get-a-new-api-key'>Get a new API Key:</h2>
+
+<p>You should place your API key on HTTP Header like:
+<code>
+x-api-key: YouHaveToPlaceYourKeyHere
+</code></p>
+<div class="highlight"><pre class="highlight plaintext"><code>x-api-key: YouHaveToPlaceYourKeyHere
+</code></pre></div><h2 id='get-a-new-api-key'>Get a new API Key:</h2>
 <p>You can create a new API key, by referring to <a href="https://wallex.ir/app/my-account/api-management" target="_blank">API Management</a>
  section in your profile.</p>
 
