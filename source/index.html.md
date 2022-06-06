@@ -771,7 +771,7 @@ url = "https://api.wallex.ir/v1/account/profile"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key: your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -781,7 +781,7 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/profile' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
@@ -908,7 +908,7 @@ url = "https://api.wallex.ir/v1/account/card-numbers"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key: your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -918,7 +918,7 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/card-numbers' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
@@ -1016,7 +1016,7 @@ payload = json.dumps({
   "card_number": "6037991895454444"
 })
 headers = {
-  'Authorization': 'Bearer your-token',
+  'x-api-key: your-token',
   'Content-Type': 'application/json'
 }
 
@@ -1027,7 +1027,7 @@ print(response.text)
 
 ```shell
 curl --location --request POST 'https://api.wallex.ir/v1/account/card-numbers' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "card_number":"6037991895454444"
@@ -1121,7 +1121,7 @@ url = "https://api.wallex.ir/v1/account/card-numbers/{cardNumberID}"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key: your-token'
 }
 
 response = requests.request("DELETE", url, headers=headers, data=payload)
@@ -1131,7 +1131,7 @@ print(response.text)
 
 ```shell
 curl --location -g --request DELETE 'https://api.wallex.ir/v1/account/card-numbers/{cardNumberID}' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
@@ -1210,7 +1210,7 @@ url = "https://api.wallex.ir/v1/account/ibans"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key: your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -1220,7 +1220,7 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/ibans' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
@@ -1305,7 +1305,7 @@ payload = json.dumps({
   "iban": "520000000000000000000000"
 })
 headers = {
-  'Authorization': 'Bearer your-token',
+  'x-api-key: your-token',
   'Content-Type': 'application/json'
 }
 
@@ -1316,7 +1316,7 @@ print(response.text)
 
 ```shell
 curl --location --request POST 'https://api.wallex.ir/v1/account/ibans' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "iban":"520000000000000000000000"
@@ -1411,7 +1411,7 @@ url = "https://api.wallex.ir/v1/account/ibans/{ibanID}"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key: your-token'
 }
 
 response = requests.request("DELETE", url, headers=headers, data=payload)
@@ -1421,7 +1421,7 @@ print(response.text)
 
 ```shell
 curl --location -g --request DELETE 'https://api.wallex.ir/v1/account/ibans/{ibanID}' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
@@ -1499,7 +1499,7 @@ url = "https://api.wallex.ir/v1/account/wallets/usdt"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key: your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -1509,7 +1509,7 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/wallets/usdt' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
@@ -1624,7 +1624,7 @@ url = "https://api.wallex.ir/v1/account/balances"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key: your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -1634,7 +1634,7 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/balances' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
@@ -1790,7 +1790,7 @@ url = "https://api.wallex.ir/v1/account/fee"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key: your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -1800,7 +1800,7 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/fee' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
@@ -1991,7 +1991,7 @@ payload = json.dumps({
   "client_id": "myUniqueRandomClientID"
 })
 headers = {
-  'Authorization': 'Bearer your-token',
+  'x-api-key: your-token',
   'Content-Type': 'application/json'
 }
 
@@ -2002,7 +2002,7 @@ print(response.text)
 
 ```shell
 curl --location --request POST 'https://api.wallex.ir/v1/account/orders' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "price":"24828",
@@ -2121,7 +2121,7 @@ payload = json.dumps({
   "clientOrderId": "LIMIT-93c76637-9742-466d-b30a-89926d2cf11c"
 })
 headers = {
-  'Authorization': 'Bearer your-token',
+  'x-api-key: your-token',
   'Content-Type': 'application/json'
 }
 
@@ -2132,7 +2132,7 @@ print(response.text)
 
 ```shell
 curl --location --request DELETE 'https://api.wallex.ir/v1/account/orders' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "clientOrderId":"LIMIT-93c76637-9742-466d-b30a-89926d2cf11c"
@@ -2233,7 +2233,7 @@ url = "https://api.wallex.ir/v1/account/openOrders?symbol=USDTTMN"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key: your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -2243,7 +2243,7 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/openOrders?symbol=USDTTMN' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
@@ -2349,7 +2349,7 @@ url = "https://api.wallex.ir/v1/account/trades?symbol=USDTTMN&side=sell&active=f
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key: your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -2359,7 +2359,7 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/trades?symbol=USDTTMN&side=sell&active=false' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
@@ -2377,7 +2377,95 @@ var requestOptions = {
 };
 
 fetch(
-  "https://api.wallex.ir/v1/account/trades?symbol=USDTTMN&side=sell&active=false",
+lse",
+  requestOptions
+)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
+```
+
+```php
+<?php
+require_once 'HTTP/Request2.php';
+$request = new HTTP_Request2();
+$request->setUrl('https://api.wallex.ir/v1/account/trades?symbol=USDTTMN&side=sell&active=false');
+$request->setMethod(HTTP_Request2::METHOD_GET);
+$request->setConfig(array(
+  'follow_redirects' => TRUE
+));
+$request->setHeader(array(
+  'Authorization' => 'Bearer your-token'
+));
+$request->setBody('');
+try {
+  $response = $request->send();
+  if ($response->getStatus() == 200) {
+    echo $response->getBody();
+  }
+  else {
+    echo 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .
+    $response->getReasonPhrase();
+  }
+}
+catch(HTTP_Request2_Exception $e) {
+  echo 'Error: ' . $e->getMessage();
+}
+```
+
+> خروجی
+
+```json
+{
+  "result": {
+    "AccountLatestTrades": [
+      {
+        "symbol": "LTCTMN",
+        "quantity": "0.0253800000000000",
+        "price": "4343723.0000000000000000",
+        "sum": "110243.0000000000000000", // Quantity * Price
+        "fee": "0.0000000000000000",
+        "feeCoefficient": "0.0000000000000000", // Fee percentage
+        "feeAsset": "LTC",
+        "isBuyer": true,
+        "timestamp": "2021-05-29T07:55:06Z"
+      },
+      {
+        "symbol": "LTCTMN",
+        "quantity": "0.0300000000000000",
+        "price": "4340184.0000000000000000",
+        "sum": "130205.0000000000000000",
+        "fee": "0.0000000000000000",
+        "feeCoefficient": "0.0000000000000000",
+        "feeAsset": "LTC",
+        "isBuyer": true,
+        "timestamp": "2021-05-29T05:48:16Z"
+      }
+    ]
+  },
+  "message": "The operation was successful",
+  "success": true,
+  "result_info": {
+    "page": 1,
+    "per_page": 100,y 
+    "count": 1,
+    "total_count": 2
+  }
+}
+```
+
+HTTP Request
+
+`GET https://api.wallex.ir/v1/account/trades`
+
+Query Parameters
+
+| Parameter | Type    | Default  | Description              | Sample  |
+| --------- | ------- | -------- | ------------------------ | ------- |
+| symbol    | String  | optional | نام بازار                | USDTTMN |
+| side      | String  | optional | سمت معامله (buy, sell)   | sell    |
+| active    | Boolean | optional | فعال ها یا غیر فعال ها ؟ | false   |
+lse",
   requestOptions
 )
   .then((response) => response.text())
