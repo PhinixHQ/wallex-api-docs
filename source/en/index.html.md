@@ -767,7 +767,7 @@ url = "https://api.wallex.ir/v1/account/profile"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key': 'your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -777,13 +777,13 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/profile' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 
 var raw = "";
 
@@ -810,7 +810,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token'
+  'x-api-key' => 'your-token'
 ));
 $request->setBody('');
 try {
@@ -904,7 +904,7 @@ url = "https://api.wallex.ir/v1/account/card-numbers"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key': 'your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -914,13 +914,13 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/card-numbers' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 
 var raw = "";
 
@@ -947,7 +947,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token'
+  'x-api-key' => 'your-token'
 ));
 $request->setBody('');
 try {
@@ -1012,7 +1012,7 @@ payload = json.dumps({
   "card_number": "6037991895454444"
 })
 headers = {
-  'Authorization': 'Bearer your-token',
+  'x-api-key': 'your-token',
   'Content-Type': 'application/json'
 }
 
@@ -1023,7 +1023,7 @@ print(response.text)
 
 ```shell
 curl --location --request POST 'https://api.wallex.ir/v1/account/card-numbers' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "card_number":"6037991895454444"
@@ -1032,7 +1032,7 @@ curl --location --request POST 'https://api.wallex.ir/v1/account/card-numbers' \
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
@@ -1062,7 +1062,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token',
+  'x-api-key' => 'your-token',
   'Content-Type' => 'application/json'
 ));
 $request->setBody('{\n    "card_number":"6037991895454444"\n}');
@@ -1117,7 +1117,7 @@ url = "https://api.wallex.ir/v1/account/card-numbers/{cardNumberID}"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key': 'your-token'
 }
 
 response = requests.request("DELETE", url, headers=headers, data=payload)
@@ -1127,13 +1127,13 @@ print(response.text)
 
 ```shell
 curl --location -g --request DELETE 'https://api.wallex.ir/v1/account/card-numbers/{cardNumberID}' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 
 var raw = "";
 
@@ -1163,7 +1163,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token'
+  'x-api-key' => 'your-token'
 ));
 $request->setBody('');
 try {
@@ -1206,7 +1206,7 @@ url = "https://api.wallex.ir/v1/account/ibans"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key': 'your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -1216,13 +1216,13 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/ibans' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 
 var raw = "";
 
@@ -1249,7 +1249,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token'
+  'x-api-key' => 'your-token'
 ));
 $request->setBody('');
 try {
@@ -1301,7 +1301,7 @@ payload = json.dumps({
   "iban": "520000000000000000000000"
 })
 headers = {
-  'Authorization': 'Bearer your-token',
+  'x-api-key': 'your-token',
   'Content-Type': 'application/json'
 }
 
@@ -1312,7 +1312,7 @@ print(response.text)
 
 ```shell
 curl --location --request POST 'https://api.wallex.ir/v1/account/ibans' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "iban":"520000000000000000000000"
@@ -1321,7 +1321,7 @@ curl --location --request POST 'https://api.wallex.ir/v1/account/ibans' \
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
@@ -1351,7 +1351,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token',
+  'x-api-key' => 'your-token',
   'Content-Type' => 'application/json'
 ));
 $request->setBody('{\n    "iban":"520000000000000000000000"\n}');
@@ -1407,7 +1407,7 @@ url = "https://api.wallex.ir/v1/account/ibans/{ibanID}"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key': 'your-token'
 }
 
 response = requests.request("DELETE", url, headers=headers, data=payload)
@@ -1417,13 +1417,13 @@ print(response.text)
 
 ```shell
 curl --location -g --request DELETE 'https://api.wallex.ir/v1/account/ibans/{ibanID}' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 
 var raw = "";
 
@@ -1450,7 +1450,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token'
+  'x-api-key' => 'your-token'
 ));
 $request->setBody('');
 try {
@@ -1495,7 +1495,7 @@ url = "https://api.wallex.ir/v1/account/wallets/usdt"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key': 'your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -1505,13 +1505,13 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/wallets/usdt' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 
 var raw = "";
 
@@ -1538,7 +1538,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token'
+  'x-api-key' => 'your-token'
 ));
 $request->setBody('');
 try {
@@ -1620,7 +1620,7 @@ url = "https://api.wallex.ir/v1/account/balances"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key': 'your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -1630,13 +1630,13 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/balances' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 
 var raw = "";
 
@@ -1663,7 +1663,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token'
+  'x-api-key' => 'your-token'
 ));
 $request->setBody('');
 try {
@@ -1786,7 +1786,7 @@ url = "https://api.wallex.ir/v1/account/fee"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key': 'your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -1796,13 +1796,13 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/fee' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 
 var raw = "";
 
@@ -1829,7 +1829,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token'
+  'x-api-key' => 'your-token'
 ));
 $request->setBody('');
 try {
@@ -1987,7 +1987,7 @@ payload = json.dumps({
   "client_id": "myUniqueRandomClientID"
 })
 headers = {
-  'Authorization': 'Bearer your-token',
+  'x-api-key': 'your-token',
   'Content-Type': 'application/json'
 }
 
@@ -1998,7 +1998,7 @@ print(response.text)
 
 ```shell
 curl --location --request POST 'https://api.wallex.ir/v1/account/orders' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "price":"24828",
@@ -2012,7 +2012,7 @@ curl --location --request POST 'https://api.wallex.ir/v1/account/orders' \
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
@@ -2047,7 +2047,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token',
+  'x-api-key' => 'your-token',
   'Content-Type' => 'application/json'
 ));
 $request->setBody('{\n    "price":"24828",\n    "quantity":"10",\n    "side":"sell",\n    "symbol":"USDTTMN",\n    "type":"limit",\n    "client_id":"myUniqueRandomClientID"\n}');
@@ -2117,7 +2117,7 @@ payload = json.dumps({
   "clientOrderId": "LIMIT-93c76637-9742-466d-b30a-89926d2cf11c"
 })
 headers = {
-  'Authorization': 'Bearer your-token',
+  'x-api-key': 'your-token',
   'Content-Type': 'application/json'
 }
 
@@ -2128,7 +2128,7 @@ print(response.text)
 
 ```shell
 curl --location --request DELETE 'https://api.wallex.ir/v1/account/orders' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "clientOrderId":"LIMIT-93c76637-9742-466d-b30a-89926d2cf11c"
@@ -2137,7 +2137,7 @@ curl --location --request DELETE 'https://api.wallex.ir/v1/account/orders' \
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
@@ -2167,7 +2167,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token',
+  'x-api-key' => 'your-token',
   'Content-Type' => 'application/json'
 ));
 $request->setBody('{\n    "clientOrderId":"LIMIT-93c76637-9742-466d-b30a-89926d2cf11c"\n}');
@@ -2229,7 +2229,7 @@ url = "https://api.wallex.ir/v1/account/openOrders?symbol=USDTTMN"
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key': 'your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -2239,13 +2239,13 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/openOrders?symbol=USDTTMN' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 
 var raw = "";
 
@@ -2275,7 +2275,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token'
+  'x-api-key' => 'your-token'
 ));
 $request->setBody('');
 try {
@@ -2345,7 +2345,7 @@ url = "https://api.wallex.ir/v1/account/trades?symbol=USDTTMN&side=sell&active=f
 
 payload = ""
 headers = {
-  'Authorization': 'Bearer your-token'
+  'x-api-key': 'your-token'
 }
 
 response = requests.request("GET", url, headers=headers, data=payload)
@@ -2355,13 +2355,13 @@ print(response.text)
 
 ```shell
 curl --location --request GET 'https://api.wallex.ir/v1/account/trades?symbol=USDTTMN&side=sell&active=false' \
---header 'Authorization: Bearer your-token' \
+--header 'x-api-key: your-token' \
 --data-raw ''
 ```
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer your-token");
+myHeaders.append("x-api-key", "your-token");
 
 var raw = "";
 
@@ -2391,7 +2391,7 @@ $request->setConfig(array(
   'follow_redirects' => TRUE
 ));
 $request->setHeader(array(
-  'Authorization' => 'Bearer your-token'
+  'x-api-key' => 'your-token'
 ));
 $request->setBody('');
 try {
